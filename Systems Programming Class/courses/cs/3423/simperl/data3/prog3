@@ -1,0 +1,7 @@
+#!/usr/bin/perl -w
+foreach (@ARGV) {
+	print `awk -F: '{ print \$1" \t\t"\$5; }' $_`;
+}
+
+
+

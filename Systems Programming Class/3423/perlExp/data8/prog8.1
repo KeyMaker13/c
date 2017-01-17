@@ -1,0 +1,34 @@
+#!/usr/bin/perl -w
+
+@found = `find *.$ARGV[0] -print`;
+
+$old = $ARGV[0];
+$mpya = $ARGV[1];
+
+print @found, "\n";
+
+@newExt = @found;
+
+$i = 0;
+
+foreach (@newExt){
+        $newExt[$i] =~ s/.$old$/.$mpya/;
+        print $newExt[$i];
+
+	$i++;
+}
+
+$n = 0;
+
+chop @found;
+chop @newExt;
+foreach (@found){
+	`mv $found[$n] $newExt[$n]`;
+	$n++;
+}
+
+@listof = `ls`;
+
+chop @listof;
+
+print "\n@listof\n\n";

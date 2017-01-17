@@ -1,0 +1,89 @@
+#!/usr/bin/perl -w
+
+if(@ARGV == 2){
+	$sw="-sd12";
+	$one = shift;
+	$two = shift;
+}
+
+if(@ARGV == 3){
+        $sw =shift;
+        $one = shift;
+        $two = shift;
+}
+
+open(DIR, "/bin/ls $one |") or die "Not able to execute /bin/ls:$!\n";
+@files1 = <DIR>;
+chop @files1;
+
+$z = 0;
+while ($z <= $#files1){
+	$tem = $one."/".$files1[$z];
+	if(-d $tem){
+		splice @files1,$z,1;
+	}else{$z++;}
+}
+
+open(DIR2, "/bin/ls $two |") or die "Not able to execute /bin/ls:$!\n";
+@files2 = <DIR2>;
+chop @files2;
+
+$z1 = 0;
+while ($z1 <= $#files2){
+	$tem1 = $two."/".$files2[$z1];
+	if(-d $tem1){
+		splice @files2,$z1,1;
+	}else{$z1++;}
+
+}
+
+
+$i = @files1-1;
+$j = @files2-1;
+
+for($x=0;$x<=$i;$x++){
+	for($y=0;$y<=$j;$y++){
+		if($files1[$x] eq $files2[$y]){
+			$tem=$one."/".$files1[$x];
+			$tem1=$two."/".$files2[$y];
+			if(`diff -q $tem $tem1`){
+		              push(@snamedif,$files1[$x]);
+			} else{push (@snamendif, $files1[$x])}
+       
+			splice @files1,$x,1;$x--;$i--;
+			splice @files2,$y,1; $y--;$j--;
+		}
+	}
+}
+
+
+@sws = split("",$sw);
+shift(@sws);
+
+for($q=0;$q<=$#sws;$q++){
+
+	if($sws[$q] eq"s"){
+		foreach$t1(@snamendif){
+			print "> ".$t1." <\n";
+		}
+	}
+
+	if($sws[$q] eq "d"){
+		foreach$t2(@snamedif){
+		print "< ".$t2." >\n";
+		}
+	}
+
+	if($sws[$q] eq "1"){
+		foreach$t3(@files1){
+			print "<<< ".$t3."\n";
+		}
+	}
+
+	if($sws[$q] eq "2"){
+		foreach$t4(@files2){
+			print ">>> ".$t4."\n";
+		}
+ 
+	}
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+$regexp = shift;
+
+foreach (@ARGV){
+	@files = `/usr/bin/find $_ -print`;
+}
+
+chop @files;
+
+@files = grep(-f && -T, @files);
+
+foreach $filepath (@files){
+	open(OF, $filepath);
+	while($line = <OF>){
+		if ($line =~ $regexp){
+			print "$filepath\n";
+			last;
+		}
+	}
+}

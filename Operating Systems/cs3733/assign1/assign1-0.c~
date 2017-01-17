@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main (int argc, char *argv[])
+{
+	if (argc < 8 ){
+		printf("Not enough parameters\n");
+		return (-1);
+	} else if (argc > 8) {
+		printf("Too many parameters\n");
+		return(-1);
+	}
+
+	printf("Assignment 1 program was written by I. Capistran\n");
+	
+	*argv++;
+	while ( *argv ) {
+		printf("%s ",*argv);	
+		*argv++;
+	}
+
+	printf("\n");
+
+	int stringsize = 30;
+
+	char str1[stringsize];
+	char str2[stringsize];
+		
+ 	part0(&str1,&str2);
+	display("Part 0\n",str1,str2);
+	printf("str1 = %s\n",str1);
+	printf("str2 = %s\n",str2);
+	return 0;
+}

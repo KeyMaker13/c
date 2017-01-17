@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+print @ARGV;
+
+print "\n";
+
+@ARGV = ( "bege" );
+
+print @ARGV;
+
+print "\n";
+
+$d = <>;
+
+print $d;
+
+print "\n";
+

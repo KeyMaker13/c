@@ -1,0 +1,56 @@
+elk04:~/cs2213/Homeworks/hw04> gccx hw04.c -o hw04
+elk04:~/cs2213/Homeworks/hw04> valgrind ./hw04
+==25491== Memcheck, a memory error detector.
+==25491== Copyright (C) 2002-2008, and GNU GPL'd, by Julian Seward et al.
+==25491== Using LibVEX rev 1884, a library for dynamic binary translation.
+==25491== Copyright (C) 2004-2008, and GNU GPL'd, by OpenWorks LLP.
+==25491== Using valgrind-3.4.1-Debian, a dynamic binary instrumentation framework.
+==25491== Copyright (C) 2000-2008, and GNU GPL'd, by Julian Seward et al.
+==25491== For more details, rerun with: -v
+==25491== 
+How many employees? 2
+Employee #1:
+        Name: ivan
+        Title: tester
+        SSNum: 222
+        Salary: 100
+        Withholding exemptions: 3
+Employee #2:
+        Name: cap
+        Title: tester
+        SSNum: 222
+        Salary: 15
+        Withholding exemptions: 7
+==25491== Use of uninitialised value of size 4
+==25491==    at 0x8048A63: GetPayroll (hw04.c:93)
+==25491==    by 0x80488DC: main (hw04.c:40)
+==25491== 
+==25491== Invalid write of size 4
+==25491==    at 0x8048A63: GetPayroll (hw04.c:93)
+==25491==    by 0x80488DC: main (hw04.c:40)
+==25491==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==25491== 
+==25491== Process terminating with default action of signal 11 (SIGSEGV)
+==25491==  Access not within mapped region at address 0x0
+==25491==    at 0x8048A63: GetPayroll (hw04.c:93)
+==25491==    by 0x80488DC: main (hw04.c:40)
+==25491==  If you believe this happened as a result of a stack overflow in your
+==25491==  program's main thread (unlikely but possible), you can try to increase
+==25491==  the size of the main thread stack using the --main-stacksize= flag.
+==25491==  The main thread stack size used in this run was 8388608.
+==25491== 
+==25491== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 15 from 1)
+==25491== malloc/free: in use at exit: 63 bytes in 8 blocks.
+==25491== malloc/free: 24 allocs, 16 frees, 1,407 bytes allocated.
+==25491== For counts of detected errors, rerun with: -v
+==25491== Use --track-origins=yes to see where uninitialised values come from
+==25491== searching for pointers to 8 not-freed blocks.
+==25491== checked 64,164 bytes.
+==25491== 
+==25491== LEAK SUMMARY:
+==25491==    definitely lost: 24 bytes in 1 blocks.
+==25491==      possibly lost: 0 bytes in 0 blocks.
+==25491==    still reachable: 39 bytes in 7 blocks.
+==25491==         suppressed: 0 bytes in 0 blocks.
+==25491== Rerun with --leak-check=full to see details of leaked memory.
+Segmentation fault

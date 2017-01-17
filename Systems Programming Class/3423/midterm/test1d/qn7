@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+$file1 = $ARGV[0];
+$file2 = $ARGV[1];
+$fileOut = $ARGV[2];
+
+open(F1, $file1) or die;
+open(F2, $file2) or die;
+open(FO,"> $fileOut") or die;
+
+$i = 0;
+while($line1 = <F1>)
+{
+	$fline1[$i] = $line1;
+	$i++;
+}
+
+$n = 0;
+while($line2 = <F2>){
+	$fline2[$n] = $line2;
+	$n++; 
+}
+
+$x = 0;
+while ($x < ($i && $n)){
+	print FO "$fline1[$x]$fline2[$x]";
+	$x++;
+}
+
+close(F1);
+close(F2);
+close(FO);

@@ -1,0 +1,27 @@
+bat19:~/Documents/cs3733/assign4/part4out> ls -l *.out
+-rw------- 1 ulv383 students 378 Apr 20 22:25 part4-1.out
+-rw------- 1 ulv383 students 378 Apr 20 22:26 part4-2.out
+-rw------- 1 ulv383 students 378 Apr 20 22:29 part4-20.out
+-rw------- 1 ulv383 students 378 Apr 20 22:27 part4-3.out
+-rw------- 1 ulv383 students 378 Apr 20 22:27 part4-4.out
+-rw------- 1 ulv383 students 378 Apr 20 22:28 part4-5.out
+-rw------- 1 ulv383 students 378 Apr 20 22:29 part4-8.out
+bat19:~/Documents/cs3733/assign4/part4out> wc *.out
+  21   21  378 part4-1.out
+  21   21  378 part4-2.out
+  21   21  378 part4-20.out
+  21   21  378 part4-3.out
+  21   21  378 part4-4.out
+  21   21  378 part4-5.out
+  21   21  378 part4-8.out
+ 147  147 2646 total
+bat19:~/Documents/cs3733/assign4/part4out> md5sum *.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-1.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-2.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-20.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-3.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-4.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-5.out
+1e56b46488509ff16c19c0af6cc3c0f7  part4-8.out
+bat19:~/Documents/cs3733/assign4/part4out> 
+

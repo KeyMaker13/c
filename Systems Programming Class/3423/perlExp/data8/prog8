@@ -1,0 +1,16 @@
+#!/usr/bin/perl -w
+
+@found = `find *.$ARGV[0] -print`;
+
+$old = $ARGV[0];
+$mpya = $ARGV[1];
+
+print @found, "\n";
+
+@newExt = @found;
+
+
+foreach $new (@newExt){
+	$new =~ s/.$old$/.$mpya/;
+	print $new;
+}

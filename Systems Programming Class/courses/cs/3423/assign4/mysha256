@@ -1,0 +1,16 @@
+#!/usr/bin/perl -w
+
+if ($ARGV[0])
+{
+	open (DIR,$ARGV[0]);
+	while (<DIR>) { chop $_; if (-d $_) {   push( @files,`find $_`); }  } 
+	if ($ARGV[1]) { open (OUT, ">> ".$ARGV[1] ); foreach $file (@files) { chop $file; if (-f $file){  print OUT `sha256sum "$file" | awk ' { print \$2," ",\$1;  }'`;    }  } close(OUT);  }
+	else { foreach $file (@files) { chop $file; if (-f $file) { print `sha256sum "$file" | awk '{ print \$2," ",\$1;  }'`;  }  }     }
+
+
+#foreach $file (@files) { chop $file; if (-f $file) {   print `sha256sum "$file"`;    }   }
+close(DIR);
+
+#if ($ARGV[1]) { open (OUT, ">> ".$ARGV[1] ); while (<OUT>) { print OUT $_, "\n";  } close(OUT);  } 
+
+}else { print "Hey make sure to include your rootfile! \n";  }

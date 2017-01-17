@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+
+foreach(@ARGV){
+	
+	push(@outa, `awk -F: ' { print \$1, "\t\t", \$5; }' $_`);	
+	#print `awk -F: '{ print \$1"\t\t"\$5; }' $_`;
+	
+}
+
+@sorteda = sort(@outa);
+
+print "@sorteda";

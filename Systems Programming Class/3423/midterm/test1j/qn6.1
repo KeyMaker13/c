@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+$regexp = shift;
+
+foreach (@ARGV){
+	chop;
+	@filename = `/usr/bin/find $_ -print`;
+}
+
+chop @filename;
+@filename = grep(-f && -T, @filename);
+
+foreach $file (@filename){
+	open(FO, $file);
+	while($line = <FO>){
+		if ($line =~ $regexp){
+			print "$file\n";
+			last;
+		}
+	}
+}

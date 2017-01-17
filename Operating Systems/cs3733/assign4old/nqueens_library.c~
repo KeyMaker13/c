@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include "nqueens_library.h"
+
+int generate_n_queens_serial(int n, int print_flag){
+   
+
+   return 0;
+}
+
+void get_array_string(int *list,int n,char *s){
+
+
+}
+
+int next_permutation(int *list, int n){
+
+   int t;
+
+   t = n;
+
+   int i = 0;
+
+   while( i < t ){
+      printf("value of t: %d\n",i);
+      *list = i - 1;
+      *list++;
+      i++;
+   } 
+   return 0;
+}

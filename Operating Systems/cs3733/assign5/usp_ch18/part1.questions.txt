@@ -1,0 +1,5 @@
+1.) I send the number in char array format.
+
+2.) I made sure that the client wrote to the server the same size as 
+the length of the string. When the client reads it only reads 1 character 
+so the correct value read back would not be a problem.

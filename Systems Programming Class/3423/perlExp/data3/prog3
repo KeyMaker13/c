@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+while($file = <ARGV>){
+	@line = split(/:/, $file);
+	print "$line[0]\t\t$line[4]\n";		
+}
+
+
+#Maynard's Code
+#while ( <> ) {
+#  @field = split(/:/,$_);
+#  print "$field[0]\t\t$field[4]\n";
+#}

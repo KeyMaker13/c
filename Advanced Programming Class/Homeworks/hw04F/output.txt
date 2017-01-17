@@ -1,0 +1,66 @@
+How Many employees?
+Max is 100 5
+Employee #1:
+        Name: Ivan Capistran
+
+        Title: Hacker
+
+        SSNum: 100-20-3000
+
+        Salary: 9999
+
+        Withholding exemptions: 3
+Employee #2:
+        Name: Patrick Henry
+
+        Title: Cool Guy
+
+        SSNum: 100-20-3000
+
+        Salary: 9999
+
+        Withholding exemptions: 3
+Employee #3:
+        Name: Ben Franklin
+
+        Title: Smart Guy
+
+        SSNum: 100-20-3000
+
+        Salary: 100
+
+        Withholding exemptions: 3
+Employee #4:
+        Name: James Madison
+
+        Title: Creepy Guy
+
+        SSNum: 100-20-3000
+
+        Salary: 15
+
+        Withholding exemptions: 7
+Employee #5:
+        Name: Testing Guy
+
+        Title: Tester
+
+        SSNum: 333-33-3333
+
+        Salary: 1000
+
+        Withholding exemptions: 6
+Ivan Capistran (Hacker)
+Patrick Henry (Cool Guy)
+Ben Franklin (Smart Guy)
+James Madison (Creepy Guy)
+Testing Guy (Tester)
+
+Weekly Payroll
+Name            Gross - Tax = Net 
+----------------------------------------------------------
+Ivan Capistran          9999.00 - 2499.00 = 7500.00
+Patrick Henry           9999.00 - 2499.00 = 7500.00
+Ben Franklin            100.00 - 24.25 = 75.75
+James Madison           15.00 - 2.00 = 13.00
+Testing Guy             1000.00 - 248.50 = 751.50

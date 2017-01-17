@@ -1,0 +1,214 @@
+elk03:~/cs2213/Homeworks/hw09> gdb ./hw09
+GNU gdb 6.8-debian
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i486-linux-gnu"...
+(gdb) run
+Starting program: /home/icapistr/cs2213/Homeworks/hw09/hw09 
+>insert 13
+13 (0)
+>insert 19
+13 (+1)
+   R: 19 (0)
+>insert 5
+13 (0)
+   L: 5 (0)
+   R: 19 (0)
+>insert 7
+13 (-1)
+   L: 5 (+1)
+      R: 7 (0)
+   R: 19 (0)
+>insert 11
+13 (-1)
+   L: 7 (0)
+      L: 5 (0)
+      R: 11 (0)
+   R: 19 (0)
+>insert 15
+13 (0)
+   L: 7 (0)
+      L: 5 (0)
+      R: 11 (0)
+   R: 19 (-1)
+      L: 15 (0)
+>insert 12
+13 (-1)
+   L: 7 (+1)
+      L: 5 (0)
+      R: 11 (+1)
+         R: 12 (0)
+   R: 19 (-1)
+      L: 15 (0)
+>delete 12
+13 (-1)
+   L: 7 (+1)
+      L: 5 (0)
+      R: 11 (+1)
+   R: 19 (-1)
+      L: 15 (0)
+>delete 15
+13 (-1)
+   L: 7 (+1)
+      L: 5 (0)
+      R: 11 (+1)
+   R: 19 (-1)
+>delete 5
+13 (-1)
+   L: 7 (+1)
+      R: 11 (+1)
+   R: 19 (-1)
+>find 13
+
+Searching for 13, did we find it? : 13
+>find 7
+
+Searching for 7, did we find it? : 7
+>find 11
+
+Searching for 11, did we find it? : 11
+>find 19
+
+Searching for 19, did we find it? : 19
+>inorder
+ 7  11  13  19 
+>preorder
+ 13  7  11  19 
+>postorder
+ 11  7  19  13 
+>levelorder
+ 13  7  11  19 
+>max
+
+Max value is:
+Max is : 19 
+>min
+
+Min value is:
+Min is: 7 
+>height
+
+Height is: 3>count
+
+Count is: 4>sum
+
+Sum is: 50>quit
+
+Program exited with code 02.
+(gdb) list
+41      static void DeleteNode(treeT *p);
+42      static int Delete(treeT *t, int k);
+43      static int count;
+44
+45
+46      //main program
+47      main()
+48      {
+49              treeT t;
+50          t = NULL;
+(gdb) list
+51              count = 0;
+52              int h; 
+53              int c;
+54              int s;
+55
+56              // scanadt not good
+57              scannerADT scanner;
+58          string line, cmd, key;
+59              int keyInt;
+60          scanner = NewScanner();
+(gdb) list
+61          SetScannerSpaceOption(scanner, IgnoreSpaces);
+62          while (TRUE) {
+63              printf(">");
+64              line = GetLine();
+65              SetScannerString(scanner, line);
+66              cmd = ConvertToLowerCase(ReadToken(scanner));
+67              if (StringEqual(cmd, "find")) {
+68                  key = ReadToken(scanner);
+69                              keyInt = atoi(key);
+70                              printf("\nSearching for %s, did we find it? : %d\n", key, Find(t,keyInt)); 
+(gdb) list
+71                              //free(line);
+72              } else if (StringEqual(cmd, "insert")) {
+73                              key = ReadToken(scanner);
+74                              keyInt = atoi(key);
+75                              InsertNode(&t, keyInt);
+76                              count++;
+77                              DisplayStructure(t);
+78                              //free(line);
+79              } else if (StringEqual(cmd, "delete")) {
+80                  key = ReadToken(scanner);
+(gdb) break 66
+Breakpoint 1 at 0x80489e7: file hw09.c, line 66.
+(gdb) print cmd
+$1 = {{name = "order\000\000\000\000\000", cb = 0 '\0', arg = 0}, {
+    name = "trim\000\000\000\000\000\000", cb = 1 '\001', arg = 0}, {
+    name = "spoof\000\000\000\000\000", cb = 2 '\002', arg = 0}, {
+    name = "multi\000\000\000\000\000", cb = 3 '\003', arg = 16}, {
+    name = "nospoof\000\000\000", cb = 3 '\003', arg = 2}, {
+    name = "spoofalert", cb = 3 '\003', arg = 4}, {
+    name = "reorder\000\000\000", cb = 3 '\003', arg = 8}}
+(gdb) continue
+The program is not being run.
+(gdb) run
+Starting program: /home/icapistr/cs2213/Homeworks/hw09/hw09 
+>insert
+
+Breakpoint 1, main () at hw09.c:66
+66              cmd = ConvertToLowerCase(ReadToken(scanner));
+(gdb) insert 15
+Undefined command: "insert".  Try "help".
+(gdb) insert 11
+Undefined command: "insert".  Try "help".
+(gdb) print cmd
+$2 = 0xbffff608 "(öÿ¿9¶\004\b"
+(gdb) print cmd
+$3 = 0xbffff608 "(öÿ¿9¶\004\b"
+(gdb) continue
+Continuing.
+0 (0)
+>delete 5
+
+Breakpoint 1, main () at hw09.c:66
+66              cmd = ConvertToLowerCase(ReadToken(scanner));
+(gdb) print cmd
+$4 = 0x804e048 "insert"
+(gdb) list 
+61          SetScannerSpaceOption(scanner, IgnoreSpaces);
+62          while (TRUE) {
+63              printf(">");
+64              line = GetLine();
+65              SetScannerString(scanner, line);
+66              cmd = ConvertToLowerCase(ReadToken(scanner));
+67              if (StringEqual(cmd, "find")) {
+68                  key = ReadToken(scanner);
+69                              keyInt = atoi(key);
+70                              printf("\nSearching for %s, did we find it? : %d\n", key, Find(t,keyInt)); 
+(gdb) break 69
+Breakpoint 2 at 0x8048a22: file hw09.c, line 69.
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) print keyInt
+$5 = 0
+(gdb) continue
+Continuing.
+0 (0)
+>insert 10
+
+Breakpoint 1, main () at hw09.c:66
+66              cmd = ConvertToLowerCase(ReadToken(scanner));
+(gdb) print keyInt
+$6 = 5
+(gdb) print keyInt
+$7 = 5
+(gdb) print cmd
+$8 = 0x804e0b8 "delete"
+(gdb) q
+The program is running.  Exit anyway? (y or n) y
+elk03:~/cs2213/Homeworks/hw09> 

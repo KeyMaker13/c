@@ -1,0 +1,57 @@
+#newsread.awk
+
+BEGIN {
+startday;
+
+lonestar_a = 0;
+lonestar_g = 0;
+lonestar_cs2413 = 0;
+lonestar_cs2413_d = 0;
+lonestar_usertime = 0;
+ringer_a = 0;
+ringer_g = 0;
+ringer_cs2413 = 0;
+ringer_cs2413_d = 0;
+ringer_usertime = 0;
+runner_a = 0;
+runner_g = 0;
+runner_cs2413 = 0;
+runner_cs2413_d = 0;
+runner_usertime = 0;
+rings_a = 0;
+rings_g = 0;
+rings_cs2413 = 0;
+rings_cs2413_d = 0;
+rings_usertime = 0;
+
+
+
+print "\t\t\tNews Reader Summary";
+print "\t\t lonestart \t runner \t ringer \t rings";
+}
+
+{ if (NR == 1) {startday = $1" "$2" "$3; } }
+
+function runScript(token7,token8,token9,token11,a){	
+	if (token7 == "group")
+	{
+		if (token7 != NULL) {a++;  }			
+	}
+	
+
+}
+
+
+ { if($6 == "lonestar.jpl.usta.edu" ){ runScript($7,$8,$9,$10,$11,runner_g); } }
+
+
+
+
+
+
+
+
+END {
+print runner_g;
+print "Start Time = ", startday," \t""End Time = "$1" "$2" "$3;
+}

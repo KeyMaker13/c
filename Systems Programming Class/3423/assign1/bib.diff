@@ -1,0 +1,20 @@
+1c1
+< Name: Hugh B. Maynard
+---
+> Name: Hishaam Kalban
+3c3
+< UTSA ID:  @01234567
+---
+> UTSA ID:  @01244334
+7,12c7,10
+<       CS 1713             K. Robbins         UTSA
+<       CS 1711             K. Robbins         UTSA
+<       CS 1723             Zhang              UTSA
+<       CS 1721             Wenk               UTSA
+<       CS 2514             Bopanna            UTSA
+<       CS 2734             S. Robbins         UTSA
+---
+>       CS 3423             Maynard            UTSA
+>       CS 3331             F. Norman          UTSA
+>       CS 2213             Turgay             UTSA
+>       CS 3723             De La Vega         UTSA

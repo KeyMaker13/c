@@ -1,0 +1,1 @@
+sed -e '/^[ \t]*$/d' test1.txt > test1.out

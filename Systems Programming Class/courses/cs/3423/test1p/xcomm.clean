@@ -1,0 +1,26 @@
+# 1 "Imakefile.c"
+# 1 "<built-in>"
+# 1 "<command line>"
+# 1 "Imakefile.c"
+# 35 "Imakefile.c"
+# 1 "/usr/X11R6/lib/X11/config/Imake.tmpl" 1
+XCOMM ----------------------------------------------------------------------
+XCOMM Makefile generated from "Imake.tmpl" and <Imakefile>
+XCOMM $Xorg: Imake.tmpl,v 1.4 2000/08/17 19:41:46 cpqbld Exp $
+XCOMM $XdotOrg: xc/config/cf/Imake.tmpl,v 1.6 2004/07/28 03:24:29 gisburn Exp $
+XCOMM
+XCOMM
+XCOMM
+XCOMM
+XCOMM $X11R6: xc/config/cf/Imake.tmpl,v 3.155 2003/12/24 18:58:41 dickey Exp $
+XCOMM ----------------------------------------------------------------------
+# 25 "/usr/X11R6/lib/X11/config/Imake.tmpl"
+all::
+.SUFFIXES: .i
+# 1 "/usr/X11R6/lib/X11/config/Imake.cf" 1
+XCOMM $XdotOrg: xc/config/cf/Imake.cf,v 1.4 2004/08/11 21:14:01 kem Exp $
+XCOMM $Xorg: Imake.cf,v 1.4 2000/08/17 19:41:45 cpqbld Exp $
+# 21 "/usr/X11R6/lib/X11/config/Imake.cf"
+XCOMM $X11R6: xc/config/cf/Imake.cf,v 3.88 2003/12/16 21:30:21 herrb Exp $
+# 37 "/usr/X11R6/lib/X11/config/Imake.cf"
+# 58 "/usr/X11R6/lib/X11/config/Imake.cf"

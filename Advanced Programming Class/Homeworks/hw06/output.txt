@@ -1,0 +1,36 @@
+elk04:~/cs2213/Homeworks/hw06> ./driver 723 41267 3a5b81
+Mnemonics for 723 are:
+PAD
+PAE
+PAF
+PBD
+PBE
+PBF
+PCD
+PCE
+PCF
+RAD
+RAE
+RAF
+RBD
+RBE
+RBF
+RCD
+RCE
+RCF
+SAD
+SAE
+SAF
+SBD
+SBE
+SBF
+SCD
+SCE
+SCF
+Mnemonics for 41267 are:
+None, 41267 contains a 1 digit
+Mnemonics for 3a5b81 are:
+None, 3a5b81 contains a 1 digit
+Mnemonics for 3a5b81 are:
+None, 3a5b81 contains at least one alphabetic character
+elk04:~/cs2213/Homeworks/hw06> 

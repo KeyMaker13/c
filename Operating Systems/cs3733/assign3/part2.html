@@ -1,0 +1,392 @@
+<HEAD>
+<TITLE>Process Scheduling for Ivan Capistran generated Sat Mar 22 22:12:14 CDT 2014</TITLE>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF><H3>Process Scheduling for Ivan Capistran generated Sat Mar 22 22:12:14 CDT 2014</H3>
+
+<H6>Process Scheduling Simulator
+version 1.100L283 by S. Robbins 
+supported by NSF grants 
+DUE-9750953 and DUE-9752165.
+<br>See <a href=http://vip.cs.utsa.edu/nsf>http://vip.cs.utsa.edu/nsf</a> for simulator information.<br><br>
+Java version 1.7.0_25 OS Linux version 2.6.28-11-generic 21090001462
+<br></H6>
+
+<hr>
+
+<b>Configuration File:</b><br>
+logdir .<br>
+logfn logfile.html<br>
+imagename gifim<br>
+user Ivan Capistran<br>
+portable true<br>
+quiet<br>
+run myrun<br>
+exp myexp<br>
+
+<hr>
+
+<b>Number of Run Files: 1</b><br>
+--------------------<br>
+name myrun<br>
+comment This contains two types of processes<br>
+algorithm SJF<br>
+seed 5000<br>
+numprocs 10<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration constant 100.0<br>
+cpuburst uniform 2.0 8.0<br>
+ioburst constant 10.0<br>
+basepriority 1.0<br>
+<br>
+numprocs 10<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration constant 100.0<br>
+cpuburst uniform 30.0 40.0<br>
+ioburst constant 10.0<br>
+basepriority 1.0<br>
+
+<hr>
+
+<b>Number of Experiment Files: 1</b><br>
+--------------------<br>
+name myexp<br>
+comment This experiment contains 6 runs and tests context switch time.<br>
+run myrun algorithm PSJF key "PSJF"<br>
+run myrun algorithm FCFS key "FCFS"<br>
+run myrun algorithm SJF key "SJF"<br>
+run myrun algorithm PSJF key "PSJF cstin .3" cstin .3<br>
+run myrun algorithm FCFS key "FCFS cstin .3" cstin .3<br>
+run myrun algorithm SJF key "SJF cstin .3" cstin .3<br>
+<br>
+
+<hr>
+
+<center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=5>Experimental Run Information for 1 Run
+</TR>
+<TR><TABLE Border=2>
+<TR COLSPAN=8>
+<TD Align=center COLSPAN=7>
+myrun: &nbsp&nbsp This contains two types of processes &nbsp&nbsp 
+Seed: 0&nbsp&nbsp Algorithm: SJF</TD></TR>
+<TR><TD Align=center>Group</TD>
+<TD Align=center>Processes</TD>
+<TD Align=center>First Arrival</TD>
+<TD Align=center>Interarrival</TD>
+<TD Align=center>Duration</TD>
+<TD Align=center>CPU Burst</TD>
+<TD Align=center>I/O Burst</TD>
+</TR>
+<TR><TD Align=center>1</TD><TD ALign=right>10</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>constant      100.00</TD><TD>uniform         2.00 8.00</TD><TD>constant       10.00</TD></TR>
+<TR><TD Align=center>2</TD><TD ALign=right>10</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>constant      100.00</TD><TD>uniform        30.00 40.00</TD><TD>constant       10.00</TD></TR>
+</TABLE></TR>
+</TR></TABLE></center>
+<p><hr><p>
+
+<Center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=4>Experimental Runs For 1 Experiment
+</TR><TR>
+<TD Align=left>Experiment</TD>
+<TD ALign=center>Commentary</TD>
+<TD ALign=center>Run</TD>
+<TD ALign=center>Modifications</TD>
+</TR>
+<TR><TD Align=center>myexp</td>
+<TD Align=left>This experiment contains 6 runs and tests context switch time.</TD>
+<TD Align=left>myrun_1</TD>
+<TD Align=left>algorithm PSJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key PSJF</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_2</TD>
+<TD Align=left>algorithm FCFS</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key FCFS</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_3</TD>
+<TD Align=left>algorithm SJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key SJF</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_4</TD>
+<TD Align=left>algorithm PSJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key PSJF cstin .3</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>CST in 0.3</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_5</TD>
+<TD Align=left>algorithm FCFS</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key FCFS cstin .3</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>CST in 0.3</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_6</TD>
+<TD Align=left>algorithm SJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key SJF cstin .3</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>CST in 0.3</TD>
+</TR>
+</TR></TABLE></center>
+
+<hr size=5>
+<H2>Starting experiment of 6 runs from myexp</H2>
+Sat Mar 22 22:12:28 CDT 2014<br>
+Starting run from myrun_1<br>
+Starting to run events using PSJF<br>
+801 events done in 162 milliseconds<br>
+<br>
+Sat Mar 22 22:12:29 CDT 2014<br>
+Starting run from myrun_2<br>
+Starting to run events using FCFS<br>
+685 events done in 91 milliseconds<br>
+<br>
+Sat Mar 22 22:12:29 CDT 2014<br>
+Starting run from myrun_3<br>
+Starting to run events using SJF<br>
+685 events done in 106 milliseconds<br>
+<br>
+Sat Mar 22 22:12:29 CDT 2014<br>
+Starting run from myrun_4<br>
+Starting to run events using PSJF<br>
+1048 events done in 148 milliseconds<br>
+<br>
+Sat Mar 22 22:12:29 CDT 2014<br>
+Starting run from myrun_5<br>
+Starting to run events using FCFS<br>
+913 events done in 125 milliseconds<br>
+<br>
+Sat Mar 22 22:12:29 CDT 2014<br>
+Starting run from myrun_6<br>
+Starting to run events using SJF<br>
+913 events done in 118 milliseconds<br>
+<br>
+<hr size=5>
+<p><hr>
+
+Sat Mar 22 22:13:20 CDT 2014<br>
+<p>
+
+<center><TABLE Border=1>
+<TR>
+<TD COLSPAN=9></TD><TD Align=center COLSPAN=2>Entries</TD><TD align=center COLSPAN=2>Average Time</TD></TR><TR>
+<TD Align=center>Name</TD>
+<TD Align=right>Key</TD>
+<TD Align=right>Time</TD>
+<TD Align=right>Processes</TD>
+<TD Align=right>Finished</TD>
+<TD Align=right>CPU Utilization</TD>
+<TD Align=right>Throughput</TD>
+<TD Align=right>CST</TD>
+<TD Align=right>LA</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+</TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>PSJF</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>  1.00000</TD>
+<TD Align=right>  .010000</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    10.21</TD>
+<TD Align=right>286</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     6.99</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99359</TD>
+<TD Align=right>  .009936</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    13.16</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>  1.00000</TD>
+<TD Align=right>  .010000</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    10.43</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>PSJF cstin .3</TD>
+<TD Align=right>  2081.90</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .96066</TD>
+<TD Align=right>  .009607</TD>
+<TD Align=right>    81.90</TD>
+<TD Align=right>    10.44</TD>
+<TD Align=right>273</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     7.33</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>FCFS cstin .3</TD>
+<TD Align=right>  2080.71</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .96121</TD>
+<TD Align=right>  .009612</TD>
+<TD Align=right>    68.40</TD>
+<TD Align=right>    13.14</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_6</td>
+<TD Align=right>SJF cstin .3</TD>
+<TD Align=right>  2068.40</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .96693</TD>
+<TD Align=right>  .009669</TD>
+<TD Align=right>    68.40</TD>
+<TD Align=right>    10.58</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+</TR></TABLE></center>
+<p>
+<br>
+<center><TABLE Border=1>
+<TR>
+<TD Align=center></TD>
+<TD Align=right></TD>
+<TD Align=center COLSPAN=4>Turnaround Time</TD>
+<TD Align=center COLSPAN=4>Waiting Time</TD>
+</TR><TR>
+<TD Align=center>Name</TD>
+<TD Align=right>Key</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD></TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>PSJF</TD>
+<TD Align=right>  1224.62</TD>
+<TD Align=right>   388.91</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>   502.31</TD>
+<TD Align=right>  1020.62</TD>
+<TD Align=right>    78.91</TD>
+<TD Align=right>  1880.00</TD>
+<TD Align=right>    28.93</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  1528.98</TD>
+<TD Align=right>   950.06</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>   443.37</TD>
+<TD Align=right>  1324.98</TD>
+<TD Align=right>   830.06</TD>
+<TD Align=right>  1702.91</TD>
+<TD Align=right>    18.14</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  1246.93</TD>
+<TD Align=right>   391.54</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>   494.36</TD>
+<TD Align=right>  1042.93</TD>
+<TD Align=right>    81.54</TD>
+<TD Align=right>  1880.00</TD>
+<TD Align=right>    28.47</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>PSJF cstin .3</TD>
+<TD Align=right>  1290.95</TD>
+<TD Align=right>   423.89</TD>
+<TD Align=right>  2081.90</TD>
+<TD Align=right>   519.03</TD>
+<TD Align=right>  1086.95</TD>
+<TD Align=right>   113.89</TD>
+<TD Align=right>  1961.90</TD>
+<TD Align=right>    29.75</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>FCFS cstin .3</TD>
+<TD Align=right>  1570.84</TD>
+<TD Align=right>   965.96</TD>
+<TD Align=right>  2080.71</TD>
+<TD Align=right>   466.96</TD>
+<TD Align=right>  1366.84</TD>
+<TD Align=right>   845.96</TD>
+<TD Align=right>  1770.71</TD>
+<TD Align=right>    19.31</TD>
+</TR>
+
+<TD Align=center>myrun_6</td>
+<TD Align=right>SJF cstin .3</TD>
+<TD Align=right>  1298.20</TD>
+<TD Align=right>   413.40</TD>
+<TD Align=right>  2068.40</TD>
+<TD Align=right>   509.66</TD>
+<TD Align=right>  1094.20</TD>
+<TD Align=right>   103.40</TD>
+<TD Align=right>  1948.40</TD>
+<TD Align=right>    29.25</TD>
+</TR>
+
+</TR></TABLE></center>
+<hr>
+<br>
+<hr>
+<H2>Process Scheduling for Ivan Capistran completed Sat Mar 22 22:17:05 CDT 2014</H2>
+<hr>

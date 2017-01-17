@@ -1,0 +1,14 @@
+#!/usr/bin/perl -w
+for ($i = 0; $i < $#ARGV; $i++){
+	
+	push(@outa,`cat "$ARGV[$i]"`);
+}
+
+open(OUTFILE,">$ARGV[$#ARGV]") or die "Unable to open file";
+
+	print OUTFILE "@outa";
+
+
+
+close(OUTFILE);
+

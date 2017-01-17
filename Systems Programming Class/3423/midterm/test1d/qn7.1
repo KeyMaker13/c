@@ -1,0 +1,26 @@
+#!/usr/bin/perl -w
+
+$fileopen = pop();
+open(OUT, "> $fileopen");
+
+open(F1, "< $ARGV[0]");
+open(F2, "< $ARGV[1]");
+
+
+while (<F2>){
+
+	@a = <F1>;
+	@b = <F2>;
+
+	print OUT $a[0];
+	print OUT $b[0];
+
+	shift @a;
+	shift @b;
+	
+#	print OUT @file;
+
+#	@line = $file;
+#	print OUT $line[0];
+#	$line = shift @line;
+}

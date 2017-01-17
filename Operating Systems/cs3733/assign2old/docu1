@@ -1,0 +1,52 @@
+#1
+dog11:~/Documents/cs3733/assign2> ./assign2 3 8 7 3 6 3 2
+Assignment 1 program was written by I. Capistran
+inputs: 3 8 7 3 6 3 2 
+Running total is : 29
+
+FCFS 
+RRRRRRRRwwwwwwwRRR
+rrrrrrrrRRRRRRwwwrRR
+0 9 4.5 0.95000 
+
+SJF 
+rrrrrrRRRRRRRRwwwwwwwRRR
+RRRRRRwwwrrrrrRR
+6 5 5.5 0.79167 
+
+PSJF 
+rrrrrrRRRrrRRRRRwwwwwwwRRR
+RRRRRRwwwRR
+8 0 4.0 0.73077 
+
+Round Robbin
+RRRrrrRRRrrrRRwwwwwwwRRR
+rrrRRRrrrRRRwwwRR
+6 6 6.0 0.79167 
+
+
+#3
+dog11:~/Documents/cs3733/assign2> ./assign2 4 8 7 3 6 1 2
+Assignment 1 program was written by I. Capistran
+inputs: 4 8 7 3 6 1 2 
+Running total is : 27
+
+FCFS 
+RRRRRRRRwwwwwwwRRR
+rrrrrrrrRRRRRRwrrrRR
+0 11 5.5 0.95000 
+
+SJF 
+rrrrrrRRrrRRRRRRwwwwwwwRRR
+RRRRRRwrRR
+8 1 4.5 0.73077 
+
+PSJF 
+rrrrrrRrrRRRRRRRwwwwwwwRRR
+RRRRRRwRR
+8 0 4.0 0.73077 
+
+Round Robbin
+RRRRrrrrRRRRwwwwwwwRRR
+rrrrRRRRrrrrRRwRR
+4 8 6.0 0.86364 

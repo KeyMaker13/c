@@ -1,0 +1,14 @@
+/dev/dsk/c0t0d0s1	swap
+/dev/dsk/c0t0d0s0	ufs
+/dev/dsk/c0t0d0s6	ufs
+/dev/dsk/c0t0d0s4	ufs
+/dev/dsk/c0t0d0s5	ufs
+/dev/dsk/c0t0d0s3	ufs
+/dev/dsk/c1t0d0s0	ufs
+/dev/dsk/c1t0d0s3	ufs
+/dev/dsk/c1t1d0s0	ufs
+/dev/dsk/c1t1d0s3	ufs
+/dev/dsk/c2t0d0s0	ufs
+/dev/dsk/c2t0d0s3	ufs
+/dev/dsk/c2t3d0s0	ufs
+/dev/dsk/c2t3d0s3	ufs

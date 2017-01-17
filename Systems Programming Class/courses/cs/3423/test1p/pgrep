@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+if (@ARGV){
+	#$regexp = shift;
+	@list = splice(@ARGV,1,$#ARGV);
+	foreach (@list){
+		#print "$_\n";
+		print `grep "$ARGV[0]" "$_"`;
+	}
+}

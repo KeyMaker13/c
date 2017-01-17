@@ -1,0 +1,68 @@
+bat30:~/Documents/cs3733/assign4> ./script.sh
+This is part 2
+Ivan Capistran
+Parameter: 12347
+12347
+12347
+0.00000
+This is part 2
+Ivan Capistran
+Parameter: 12349
+12349
+12373
+0.00001
+This is part 2
+Ivan Capistran
+Parameter: 1493749
+1493749
+1493749
+0.00002
+This is part 2
+Ivan Capistran
+Parameter: 1493748
+1493748
+1493749
+0.00002
+This is part 2
+Ivan Capistran
+Parameter: 2147483647
+2147483647
+2147483647
+0.00074
+This is part 2
+Ivan Capistran
+Parameter: 2147483645
+2147483645
+2147483647
+0.00072
+This is part 2
+Ivan Capistran
+Parameter: 439366540651
+439366540651
+439366540663
+0.01542
+This is part 2
+Ivan Capistran
+Parameter: 38743898310620761
+38743898310620761
+38743898310620761
+3.24983
+This is part 2
+Ivan Capistran
+Parameter: 426182928722265301
+426182928722265301
+426182928722265313
+22.65197
+This is part 2
+Ivan Capistran
+Parameter: 2305843009213693951
+2305843009213693951
+2305843009213693951
+28.70133
+This is part 2
+Ivan Capistran
+Parameter: 9223371873002223329
+9223371873002223329
+9223371873002223337
+130.61437
+ 

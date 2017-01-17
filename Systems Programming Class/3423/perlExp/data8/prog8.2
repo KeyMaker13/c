@@ -1,0 +1,46 @@
+#!/usr/bin/perl -w
+
+$old = $ARGV[0];
+$mpya = $ARGV[1];
+$dir = $ARGV[2];
+
+@found = `find *.$old -print`;
+
+#print @found, "\n";
+
+@found = grep(-f && -T, @found);
+
+@newExt = @found;
+
+$i = 0;
+
+foreach (@newExt){
+        $newExt[$i] =~ s/.$old$/.$mpya/;
+#        print $newExt[$i];
+
+	$i++;
+}
+
+#print "@found\n";
+#print "@newExt\n";
+
+$n = 0;
+
+chop @found;
+chop @newExt;
+foreach (@found){
+	`mv $dir/$found[$n] $dir/$newExt[$n]`;
+	$n++;
+}
+
+$x = 0;
+foreach (@found){
+	print "mv $dir/$found[$x] $dir/$newExt[$x]\n";
+	$x++;
+}
+
+#@listof = `ls`;
+
+#chop @listof;
+
+#print "\n@listof\n\n";

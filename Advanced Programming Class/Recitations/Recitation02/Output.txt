@@ -1,0 +1,30 @@
+Enter a number and I will word it for you.
+Or enter -1 to quit.
+The value must be between 1 and 999,999
+ 0
+zero 
+The value must be between 1 and 999,999
+ 1
+one 
+The value must be between 1 and 999,999
+ 11
+eleven 
+The value must be between 1 and 999,999
+ 256
+two hundred fifty-six 
+The value must be between 1 and 999,999
+ 1729
+one thousand seven hundred twenty-nine 
+The value must be between 1 and 999,999
+ 2001
+two thousand one 
+The value must be between 1 and 999,999
+ 12345
+twelve thousand three hundred fourty-five 
+The value must be between 1 and 999,999
+ 13000
+thirteen thousand 
+The value must be between 1 and 999,999
+ -1
+
+

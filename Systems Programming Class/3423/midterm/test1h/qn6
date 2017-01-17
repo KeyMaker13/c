@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+
+$regexp = shift;
+
+while (<>){
+	if ($_ =~ $regexp){
+		print;
+	}
+}

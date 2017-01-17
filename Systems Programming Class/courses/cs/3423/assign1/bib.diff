@@ -1,0 +1,22 @@
+1,3c1
+< Name: Hugh B. Maynard
+< 
+< UTSA ID:  @01234567
+---
+> Name: Ivan Capistran
+4a3
+> UTSA ID:  @01282924
+7,15c6,8
+<       CS 1063             T. Bylander        UTSA
+<       CS 1713             K. Robbins         UTSA
+<       CS 1711             K. Robbins         UTSA
+<       CS 2123             H. Maynard         UTSA
+<       CS 2121             H. Maynard         UTSA
+<       CS 2233             T. Bylander        UTSA
+<       CS 2231             T. Bylander        UTSA
+<       CS 3333             Bopanna            UTSA
+<       CS 3331             Bopanna            UTSA
+---
+>       CS 3723             Neal R. Wagner     UTSA
+>       CS 3423             Hugh B. Maynard    UTSA
+>       CS 3343             Jianhua Ruan       UTSA

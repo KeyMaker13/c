@@ -1,0 +1,6 @@
+elk06:~/Documents/cs3733/assign4> ls -l part1.out
+-rw------- 1 ulv383 students 2580 2015-04-08 02:00 part1.out
+elk06:~/Documents/cs3733/assign4> wc part1.out
+ 172  172 2580 part1.out
+elk06:~/Documents/cs3733/assign4> md5sum part1.out
+07c89b52d11cfffa99e5d4991ea21b8b  part1.out

@@ -1,0 +1,89 @@
+#!/usr/bin/perl -w
+if(@ARGV ==2){
+$one= shift(@ARGV);
+$two= shift(@ARGV);
+
+open (FII, $one);
+@fly=<FII>;
+
+#open(FII,  "/usr/bin/find $one  -print |") or die "dead";
+#@files=<FII>;
+
+chop @fly;
+##############################
+foreach $fly(@fly){
+
+open (FII, "/usr/bin/find $fly -print |") or die "dead";
+@files=<FII>;
+
+chop @files;
+
+foreach $file(@files)
+{
+   if(-f $file && ! -d $file ){
+  open (DAT ,"sha1sum $file |" ) or die "dead";
+   
+  @txt=<DAT>;
+  push(@arr,@txt);  
+ }
+
+}
+
+#print @arr;
+
+open (OUT,">>$two");
+foreach $tt(@arr){
+ chop $tt;
+@st = split(/\s+/,$tt);
+print OUT "$st[1]\t$st[0]\n";
+}
+}
+}
+
+
+
+
+
+if(@ARGV ==1){
+$one= shift(@ARGV);
+
+open (FII, $one);
+@fly=<FII>;
+
+#open(FII,  "/usr/bin/find $one  -print |") or die "dead";
+#@files=<FII>;
+
+chop @fly;
+
+
+#open(FII,  "/usr/bin/find $one  -print |") or die "dead";
+#@files=<FII>;
+foreach $fly(@fly){
+
+open (FII, "/usr/bin/find $fly -print |") or die "dead";
+@files=<FII>;
+
+chop @files;
+
+
+foreach $file(@files)
+{
+   if(-f $file && ! -d $file ){
+  open (DAT ,"sha1sum $file |" ) or die "dead";
+   
+  @txt=<DAT>;
+  push(@arr,@txt);  
+ }
+
+}
+
+#print @arr;
+
+foreach $tt(@arr){
+ chop $tt;
+@st = split(/\s+/,$tt);
+print  "$st[1]\t$st[0]\n";
+}
+}
+
+}

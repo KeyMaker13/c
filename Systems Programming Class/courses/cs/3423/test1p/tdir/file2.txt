@@ -1,0 +1,3 @@
+file2.txt
+this is a text file let me see what it says at the bottom
+just another sentence here

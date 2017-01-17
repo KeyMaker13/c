@@ -1,0 +1,19 @@
+#!/usr/bin/perl -w
+
+foreach (@ARGV){
+	@files = `/usr/bin/find $_ -print`;
+}
+
+chop @files;
+@files = grep(-f && -T, @files);
+
+foreach $filepath(@files){
+	open(FO, $filepath) or die;
+
+	while ($line = <FO>){
+		if ($line =~ 'sniffer'){
+			print "$filepath\n";
+			last;
+		}
+	}
+}

@@ -1,0 +1,255 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <sys/time.h>
+#include <pthread.h>
+#define MILLION 1000000L
+#define BILLION 1000000000L;
+
+long long primepassed = 0;
+int numtofind = 0;
+long long primesfound[100];
+int currentnum = 0;
+int adder = 0;
+int increase = 0;
+
+void function_to_time() {
+   int i;
+   for (i=0;i<100000000;i++);
+}
+
+
+void *find_prime(void *arg){
+
+printf("thread\n");
+
+   long long catcher;   
+
+   while(numtofind){
+   ++increase;   
+
+      catcher = (primepassed + increase);
+      if ( isPrimeLongLong( catcher )){
+         printf("%lld\n", catcher);
+         
+         
+         --numtofind;
+         //primesfound[adder] = (catcher);
+         //++adder;
+      }
+
+   }
+
+   
+   pthread_exit((void*) arg);
+
+}
+
+
+struct prime_data {
+   
+   long long *primegreater;
+   int primefound;
+   int primetofind;
+   int numthreads;
+
+};
+
+
+/* 0 is false 1 is true  */
+
+
+int main (int argc, char *argv[]){
+
+   int lengthcheck;
+   int lengthcheck2;
+   int lengthcheck3;
+   int i = 0;
+
+   int error;
+   int fd;
+   pthread_t tid;
+
+   //if (error = pthread_create(&tid, NULL, find_prime, &fd))
+   //fprintf(stderr, "Failed to create thread: %s\n", strerror(error));
+
+
+   //struct prime_data *pdata = {NULL, 0, 0, 0};
+   struct prime_data *pdata;
+
+
+   long timedif;
+   double timedifout;
+   struct timeval tpend;
+   struct timeval tpstart;
+
+
+   if ( argc < 4  ){
+      fprintf(stderr, " Please enter 3 integer parameter\n");
+      exit(-1);
+   } else if ( argc > 4 ){
+      fprintf(stderr, " Please enter 3 integer parameter\n");
+      exit(-1);
+   }
+   
+   if ( strlen(argv[1]) > 25  ) {
+      fprintf(stderr, " Please do not try to buffer overflow\n");
+      exit(-1);
+   }   
+
+   if ( strlen(argv[2]) > 25 ) {
+      fprintf(stderr, " Please do not try to buffer overflow\n");
+      exit(-1);
+   }
+
+   if ( strlen(argv[3]) > 25){
+
+      fprintf(stderr, " Please do not try to buffer overflow\n");
+      exit(-1);
+   }
+
+   lengthcheck = strlen(argv[1]);
+   lengthcheck2 = strlen(argv[2]);
+   lengthcheck3 = strlen(argv[3]);
+
+   for ( i = 0; i < lengthcheck; i++){
+      if ( isalpha(argv[1][i]) ){
+         fprintf(stderr, " Please only enter digits \n");
+         exit(-1);         
+      } else if ( isdigit(argv[1][i])  ) {
+         
+         
+      } else {
+         fprintf(stderr," Please only enter digits \n");
+         exit(-1);
+      }         
+      
+   }   
+
+   for ( i = 0; i < lengthcheck2; i++){
+      if ( isalpha(argv[2][i]) ){
+         fprintf(stderr, " Please only enter digits \n");
+         exit(-1);         
+      } else if ( isdigit(argv[2][i])  ) {
+         
+         
+      } else {
+         fprintf(stderr," Please only enter digits \n");
+         exit(-1);
+      }               
+   }
+
+   for ( i = 0; i < lengthcheck3; i++){
+      if ( isalpha(argv[3][i]) ){
+         fprintf(stderr, " Please only enter digits \n");
+         exit(-1);
+      } else if ( isdigit(argv[3][i])  ) {
+
+
+      } else {
+         fprintf(stderr," Please only enter digits \n");
+         exit(-1);
+      }
+   }
+
+   fprintf(stderr, "This is part 4\n");
+   fprintf(stderr, "Ivan Capistran\n");	   
+   fprintf(stderr, "Parameter: %s %s %s \n" ,argv[1], argv[2], argv[3]);
+   long long primeparameter = atoll(argv[1]);
+   int numfind = atoi(argv[2]);
+   int numthreads = atoi(argv[3]);	
+
+   int loop = 1;
+   //int increase = 0;
+   //int adder = 0;
+   long long primegreater[numfind];
+   pthread_t thread[numthreads];
+   int threadfd[numthreads];
+   
+   primepassed = primeparameter;
+   numtofind = numfind;
+
+   //primesfound = (long long *)malloc(sizeof(long long) * numfind);
+   //primesfound = primegreater[numfind];   
+
+   void *status;   
+   pthread_attr_t attr;
+   /* Initialize and set thread detached attribute */
+   pthread_attr_init(&attr);
+   pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);   
+   
+
+
+   /* get time of day */
+   if (gettimeofday(&tpstart, NULL)) {
+      fprintf(stderr, "Failed to get start time\n");
+      return 1;
+   }
+   
+
+   /* call all threads */
+   
+   for (i = 0; i < numthreads; i++){
+      if (error = pthread_create(&thread[i], NULL, find_prime, &threadfd[i]))
+      fprintf(stderr, "Failed to create thread: %s\n", strerror(error));
+   }
+
+   /* join the threads  */
+   /* Free attribute and wait for the other threads */
+   pthread_attr_destroy(&attr);
+   for(i=0; i<numthreads; i++) {
+      if ( error  = pthread_join(thread[i], &status) )
+      fprintf(stderr, " Failed to join thread %s\n", strerror(error));
+   }
+
+   pthread_exit(NULL);
+   /* then get the time and print out the rest of the stuff  */
+
+/* from part 3 old way */
+   /* 
+   while(numfind){
+      
+      if ( isPrimeLongLong( primeparameter + increase )){
+         function_to_time();
+         if (gettimeofday(&tpend, NULL) && (numfind == 1)) {
+            fprintf(stderr, "Failed to get end time\n");
+            return 1;
+         }   
+         numfind--;
+         primegreater[adder] = (primeparameter + increase);
+         adder++;
+      }
+      increase++;
+   }
+   */
+
+   /* standard output */
+
+   printf("%lld\n", primeparameter);
+   
+   
+   //for (i = 0; i < (adder); i++){
+   //   printf("%lld\n",primesfound[i]);
+   //}
+   
+
+   /* standard err  */
+   //fprintf(stderr,"%lld\n", primeparameter);
+
+   /*
+   for (i = 0; i < (adder); i++){
+      fprintf(stderr,"%lld\n",primegreater[i]);
+      
+   }
+   */
+
+   //timedif = MILLION*(tpend.tv_sec - tpstart.tv_sec) + tpend.tv_usec - tpstart.tv_usec;
+ 
+   //timedifout = timedif/1000000.0;
+
+   //fprintf(stderr,"The function_to_time took %ld microseconds\n", timedif);
+   //fprintf(stderr,"%.5lf\n", timedifout);
+
+   return 0;
+}

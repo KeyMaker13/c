@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+
+while (<>){
+	@result = `/usr/bin/find $_`;
+}
+
+chop @result;
+@txtfiles = grep(-f && -T, @result);
+print join("\n",@txtfiles), "\n";

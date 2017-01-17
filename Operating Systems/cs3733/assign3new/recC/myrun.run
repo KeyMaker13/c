@@ -1,0 +1,19 @@
+name myrun
+comment This contains two types of processes
+algorithm SJF
+seed 5000
+numprocs 15
+firstarrival 0.0
+interarrival constant 0.0
+duration uniform 5.0 7.5
+cpuburst constant 5.0
+ioburst uniform 10 20
+basepriority 1.0
+
+numprocs 15
+firstarrival 0.0
+interarrival constant 0.0
+duration constant 2.0
+cpuburst constant 0.5
+ioburst uniform 10.0 20.0
+basepriority 1.0

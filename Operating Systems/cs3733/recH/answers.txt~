@@ -1,0 +1,12 @@
+9.
+
+11.
+a. yes it reports making the connection
+b. no second client can't communicate with the server
+c. the server says it is terminated, and then the second client is able to connect
+d. tells the client that the connection was not successfull, that there was error.
+
+14.
+a. last person connected gets the message
+b. one client
+c. yes

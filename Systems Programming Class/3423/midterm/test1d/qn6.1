@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+while($line = <>){
+	$line =~ s/[ 	][ 	]*/ /g;
+	$line =~ s/^\s+$//;
+	if ($line =~ /^\/\*.*\/$/){
+		$line =~ s/perl/PERL/;
+	}
+	print $line;
+}

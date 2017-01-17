@@ -1,0 +1,1 @@
+#sed -e '/.*deltaf([ \t]*distance[ \t]*).*/ s/distance/speed/g' < test1 > test1.out

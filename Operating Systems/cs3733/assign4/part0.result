@@ -1,0 +1,38 @@
+bat10:~/Documents/cs3733/assign4> ./part0.exe 12347
+This is part 0
+Ivan Capistran
+Parameter: 12347
+Is prime
+The answer is prime
+bat10:~/Documents/cs3733/assign4> ./part0.exe 12349
+This is part 0
+Ivan Capistran
+Parameter: 12349
+Is not prime
+The answer is not prime
+bat10:~/Documents/cs3733/assign4> ./part0.exe 1493749
+This is part 0
+Ivan Capistran
+Parameter: 1493749
+Is prime
+The answer is prime
+bat10:~/Documents/cs3733/assign4> ./part0.exe 1493748
+This is part 0
+Ivan Capistran
+Parameter: 1493748
+Is not prime
+The answer is not prime
+bat10:~/Documents/cs3733/assign4> ./part0.exe 2147483647
+This is part 0
+Ivan Capistran
+Parameter: 2147483647
+Is prime
+The answer is prime
+bat10:~/Documents/cs3733/assign4> ./part0.exe 2147483645 
+This is part 0
+Ivan Capistran
+Parameter: 2147483645
+Is not prime
+The answer is not prime
+bat10:~/Documents/cs3733/assign4> 
+

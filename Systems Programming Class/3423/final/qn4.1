@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+
+$reg1 = shift; $reg2 = shift;
+
+#print "$regexp\n";
+
+$fin = open(IN, "./tc");
+
+while(<IN>){
+	if(/"$reg1 $reg2"/){
+		if(/hishaam\.1\.1\:00/ || /129\.115\.255\.255\:111/){
+			print $_;
+		}
+	}
+
+
+}

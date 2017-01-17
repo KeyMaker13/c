@@ -1,0 +1,123 @@
+#!/usr/bin/perl -w
+
+#check for input first arg
+#if the first arg is there then check to see what it is
+#if it is not there then throw the user out of the program and give a specification of how to run the cmd
+if ($ARGV[0]) {	
+	if (  $ARGV[0] eq  "-l"  ) 
+	{	
+		if ($ARGV[1]){
+			$regexp = $ARGV[1];	
+			@args = @ARGV[2 .. $#ARGV];
+			foreach $arg (@args){
+				 #check to see if it is a dir
+                		if (-d $arg){
+                        		#push all the files
+                        		push (@dirfiles, `find $arg -type f -printf "%f\n"`);
+                        		#take away the first one because it is the name of the dir
+                        		shift (@dirfiles);
+					print @dirfiles;
+					#foreach $dirfile (@dirfiles) {
+
+                                		#print "$dirfile";      
+                                	#	chop ($dirfile);
+                                	#	#print "$dirfile\n";                                    
+                                	#	if (!( -T $dirfile)  && !(-d $dirfile) ) {
+                                        #		print `strings "$regexp"`;
+                                        #		print "\n";
+                                        #		print "not text file\n";
+                                	#	}	
+                                	#	else
+                                	#	{
+                                        #		print `grep "$regexp" "$dirfile"`;
+                                	#	}
+                        		#}
+
+                		}
+                		else 
+				{
+
+                        		if (-f $arg ) 
+					{
+                        			print "$arg\n";
+                        		}	
+                		}
+	
+			}
+		}
+		else
+		{
+			
+		}
+		
+	}
+	else 
+	{
+	
+		$regexp = $ARGV[0];
+		#have first arg now get every arg from now
+		#move over one
+		shift(@ARGV);
+		#thanks php i love foreach
+		foreach $in (@ARGV) {	
+			#check to see if it is a dir
+			if (-d $in)
+			{
+	
+				#push (@dirfilesnames, `find $in -type f -printf "%f: \n"`);
+				#push all the files
+				push (@dirfiles,  `find $in`);
+				#take away the first one because it is the name of the dir
+				shift (@dirfiles);
+				#shift (@dirfilesnames);
+				
+				foreach $dirfile (@dirfiles) 
+				{
+					
+					#print "$dirfile";	
+					chop ($dirfile);
+						
+					#print "$dirfile\n";					
+					if (!( -T $dirfile)  && !(-d $dirfile) ) {
+						print "$dirfile:",`strings "$regexp"`;
+					}
+					else
+					{
+						if (!(-d $dirfile )){
+						print `grep -H "$regexp" $dirfile | sed -e 's/^.*\\/\\(.*\\)/\\1/g'`;
+					
+					#	push (@dirfiletext,`grep "$regexp" "$dirfile"`);
+					#		foreach ($dirfiletxt (@difiletext){
+					#			print "here";
+					#		}
+						}
+					}
+		
+				}				
+		
+			}
+			else 
+			{
+
+				if (-f $in) 
+				{
+					
+					print `grep -H  "$regexp" "$in"`;
+				}
+			}
+		}
+
+	
+	}
+}
+else
+{
+	print "Hey you need to specify a regular expression!\n";
+}
+
+
+
+
+
+
+

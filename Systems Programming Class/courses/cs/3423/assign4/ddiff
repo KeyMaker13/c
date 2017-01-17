@@ -1,0 +1,219 @@
+#!/usr/bin/perl -w 
+	#check for second arg
+	#second arg could be flags
+# this one was pretty hard and tricky
+# i did it a complete wrong way
+# i should of just built it more on the fact that the user will input the correct stuff on the cmd line
+	my %files;
+	if ($ARGV[0])	
+	{
+		#check for flags
+		if ($ARGV[0] =~ m/(-[ds12])/)
+		{ 		
+			#print $ARGV[0],"\n";
+			if ($ARGV[0] =~ m/d/)
+			{
+				$d = 1;
+			
+			}
+			if ($ARGV[0] =~ m/s/)
+			{
+				$s = 1;
+			}
+			if ($ARGV[0] =~ m/1/)
+			{
+				$one = 1;
+			}
+			if ($ARGV[0] =~ m/2/)
+			{
+				#$two = 1;
+			}
+			
+			if ($ARGV[1])
+			{
+				push (@dir1, `find $ARGV[1]`);
+				
+				if ($ARGV[2])
+				{
+					push (@dir2, `find $ARGV[2]`);
+
+					
+					shift(@dir1);
+					shift(@dir2);
+					chop(@dir1);
+					chop(@dir2);
+
+					foreach $dir1f  (@dir1)
+					{
+						if ( !(-d $dir1f) && (-f $dir1f) )
+						{
+							foreach $dir2f (@dir2)
+							{
+								if ( !(-d $dir2f) && (-f $dir2f)  ) 
+								{
+									if ($d)
+									{
+										if (`find "$dir1f" -printf "%f"` eq `find "$dir2f" -printf "%f"`  ) 
+										{
+											
+											if (`/usr/bin/diff -q "$dir1f" "$dir2f"`)
+											{
+												push (@outa, `find "$dir1f" -printf "<%f>"`);
+											}
+										}
+									}
+									if ($s)
+									{
+										if (`find "$dir1f" -printf "%f"` eq `find "$dir2f" -printf "%f"`  )
+										{
+											if (`/usr/bin/diff -q "$dir1f" "$dir2f"`)
+											{
+												
+											}
+											else
+											{
+												push (@outa, `find "$dir1f" -printf ">%f<\n"`);
+											}
+										}
+									}
+									if ($one)
+									{
+										if (`find "$dir1f" -printf "%f"` eq `find "$dir2f" -printf "%f"`)
+										{
+
+										}
+										else
+										{
+											foreach $curref (@outa)
+											{
+												#print "$curref\n";
+												if (("$curref" eq `find "$dir1f" -printf "<<<%f\n"`))
+												{
+													#push (@outa,`find "$dir1f" -printf "<<<%f\n"`);
+												}
+												else
+												{
+													push (@outa,`find "$dir1f" -printf "<<<%f\n"`);
+												}
+											}
+										}
+										
+									}						
+			
+									
+								}
+							}
+						}
+					}
+					
+					print "@outa";
+
+					
+				}
+			}
+
+
+
+			
+		}
+		else 
+		{
+			#push from dir1 argv0
+			push (@dir1, `find $ARGV[0]`);	
+			#check for dir1
+			if ($ARGV[1])
+			{
+					#push a find from dir 2
+					#do algorithm in here
+					#chop($ARGV[1]);
+					push (@dir2, `find $ARGV[1]`);
+					#print "@dir1";
+					#print "@dir2";  		
+					shift(@dir1);
+					shift(@dir2);
+					chomp(@dir1);
+					chomp(@dir2);
+					#run loop 
+						# would be nice to make a nice function that does the comparision in logn time
+						#print @dir1;
+					foreach $dir1f (@dir1)
+					{
+						if (!(-d $dir1f)) 
+						{
+							foreach $dir2f (@dir2)
+							{
+								#print $dir1f;
+								if ( !(-d $dir2f) )
+								{
+									#check for identical name
+									if (`find "$dir1f" -printf "%f"` eq `find "$dir2f" -printf "%f"`)
+									{
+										#$namematch = 1;
+										if (!$files{$dir1f}) {$files{$dir1f} = 1;}
+										if (!$files{$dir2f}) {$files{$dir2f} = 2;}
+										#print "same file name \n";
+										if (`/usr/bin/diff -q "$dir1f" "$dir2f"`)
+					
+										#if ($t)
+										{
+											#$samefile = 0;
+											#print "$t\n";
+											push (@outa,`find "$dir1f" -printf "<%f>\n"`);
+											push (@names,`find "$dir1f" -printf "%f"`);
+
+										}
+										else
+										{
+											#$samefile = 1;
+											#print ">",`find "$dir1f" -printf "%f"`,"<\n";
+											push (@outa,`find "$dir1f" -printf ">%f<\n"`);
+											push (@names, `find "$dir1f" -printf "%f"`);
+										}
+									}
+									else
+									{
+										if (!$files{$dir2f}) {$files{$dir2f} = 2;}	
+									}		
+								}
+							}
+							#if it had the file then print the comparison
+							#if (!$namematch)
+							#{
+								#print "<<<",`find "$dir1f" -printf "%f"`,"\n";
+							#	push (@outa,`find "$dir1f" -printf "<<<%f\n"`);
+							#	push (@names, `find "$dir1f" -printf "%f"`);
+							#}	
+							#this ends the if check for to see if it is a directory 
+						}
+						if (!$files{$dir1f}) {$files{$dir1f} = 1;}
+					#this ends the for loop below for checking everything in dir1 loop for dir1
+					}
+					foreach (keys %files) {
+						if ($files{$_} == 1) {
+							push(@outa, `find "$_" -printf "<<< %f\n"`);
+						}
+						elsif ($files{$_} == 2) {
+							push(@outa, `find "$_" -printf ">>> %f\n"`);
+						}
+					}
+					
+					#at end print this array
+					print @outa;		
+			#this ends the check for dir 2
+			}
+			else
+			{
+				print "specify the second directory\n";
+			}
+			
+			
+		}
+	
+	
+
+	}
+	else
+	{
+		print "Hey you need to specify the second argument.\n";
+	}
+

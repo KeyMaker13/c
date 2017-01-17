@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+
+$d = <>;
+print "d = $d\n";
+
+$e = <>;
+print "e = $e\n";
+
+#$f = <>;
+#print "f = $f\n";
+
+print "$ARGV\n";

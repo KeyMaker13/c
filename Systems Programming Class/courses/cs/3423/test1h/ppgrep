@@ -1,0 +1,5 @@
+#!/usr/bin/perl -w
+$regexp = $ARGV[0];
+shift(@ARGV);
+push(@results, `grep $regexp @ARGV`);
+print @results;

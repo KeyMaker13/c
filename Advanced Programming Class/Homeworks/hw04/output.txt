@@ -1,0 +1,16 @@
+elk04:~/cs2213/Homeworks/hw04> gccx hw04.c -o hw04
+elk04:~/cs2213/Homeworks/hw04> ./hw04
+How many employees? 2
+Employee #1:
+        Name: ivan
+        Title: tester
+        SSNum: 222
+        Salary: 15
+        Withholding exemptions: 7
+Employee #2:
+        Name: ivan
+t       Title: ester
+        SSNum: 222
+        Salary: 15
+        Withholding exemptions: 7
+Segmentation fault

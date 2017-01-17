@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+if (@ARGV) {
+$a = shift;
+#print "first shift $a\n";
+$a = shift;
+print "second shift $a\n";
+@b = <>;
+$c = shift @b;
+
+
+
+print "after b......a = $a\n";
+
+print "after b......b = $b\n";
+
+print "after b.....c = $c\n";
+}
+

@@ -1,0 +1,188 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "genlib.h"
+#include "simpio.h"
+#include "strlib.h"
+#include "stack.h"
+
+
+//This is the prompt to tell the user what is going on
+Prompt(){
+printf("This is a RPN Calculator\n");
+printf("You will enter a Reverse Polish Notation equation like the example bellow\n");
+printf("50.0 (enter) 1.5 (x) 3.8 (enter) 2.0 (/) (+)\n");
+printf("If you enter incorrect values you can try again\n");
+char minus = '-';
+printf("The only correct operators are + %c / *\n",minus);
+printf("I will calculate the equation you entered\n");
+printf("press q any time to quit\n");
+}
+
+//checks the character to make sure it is a valid operator sign
+static int isOperator(char check){
+	
+	switch (check){
+		case '*' : return 1;
+		case '/' : return 1;
+		case '+' : return 1;
+		case '-' : return 1;
+		case 'x' : return 1;
+		default  : return 0;
+	}
+	
+return 0;
+}
+
+// checks to see if the value of the string inputed is correct
+static int IsValidChar(char check){
+// 0-9 isdigit(check)
+// (* + - /)  isOperator(check)
+	if (!isdigit(check) && !isOperator(check) && check != '.'){
+		return 0;
+	}
+
+return 1;
+}
+
+// run a loop through the whole string and see if the characters are
+// valid 
+static int CheckEntry(char *str){
+int i = 0;
+	while(str[i] != '\0'){
+		if (!IsValidChar(str[i])){
+			return 1;
+		}
+	i++;
+	}
+return 0;
+}
+
+static double OperandCase(char o, double lhs, double rhs){
+
+	switch (o){
+		case '+' : return (lhs + rhs);
+		case '-' : return (lhs - rhs);
+		case '*' : return (lhs * rhs);
+		case '/' : return (lhs / rhs);
+		case 'x' : return (lhs * rhs);
+		default: printf("Hacker\n");
+	}
+return 0.0;	
+}
+
+CalcRPN(char *str, stackADT stack){
+double lhs, rhs, result, pInput;	
+string in;
+char o = str[0];
+	
+		if(isdigit(str[0])){
+			in = str;
+			//pInput = malloc(sizeof(double));
+			pInput = atof(in);
+			//Push(stack,(stackElementT)StringToReal(in)); works
+			//Push(stack,(stackElementT)atof(in)); does not work
+			Push(stack, (stackElementT)(int)pInput);
+		}
+		if(isOperator(o)){
+				
+				rhs =(int) Pop(stack);
+				lhs = (int) Pop(stack);
+				result = OperandCase(o,lhs,rhs);
+				printf("%d\n", (int)result);
+				Push(stack,(stackElementT)(int)result);
+		}
+free(in);
+}
+
+static void DisplayStack(stackADT stack)
+{
+    int i, depth;
+
+    printf("Stack: ");
+    depth = StackDepth(stack);
+    if (depth == 0) {
+        printf("empty\n");
+    } else {
+        for (i = depth - 1; i >= 0; i--) {
+            if (i < depth - 1) printf(", ");
+            printf("%d",(int) GetStackElement(stack, i));
+        }
+        printf("\n");
+    }
+}
+
+// checks to see if the user entered a q
+int Exit(char *q, int i){
+		while(q[i] != '\0'){
+			if (q[i] == 'q' || q[i] == 'Q'){
+				return 1;
+			}
+			i++;
+		}
+return 0;
+}
+
+main(){
+Prompt();
+// doing a while loop with a integer variable
+// the user will exit the program with ExitPrompt
+int run = 1, ie = 0, i = 0;
+double lhs, rhs, result, pInput;
+//string in;
+//string rpn;
+char o;
+char *rpn;
+stackADT RPNStack;
+RPNStack = NewStack();
+
+printf("Begin to enter your RPN values: ");
+	while(run){
+		printf("> ");
+		//rpn = (char*) GetLine();
+		//scanf("%s\n",rpn);
+		rpn = GetLine();
+		o = rpn[0];
+			// if it contains a q then exit loop
+			if(Exit(rpn,ie)){
+				run = 0;
+				ie = 0;
+				break;
+			}else{
+			// if it doesn't contains the correct characters
+				if (CheckEntry(rpn)){
+				printf("This entry does not contain a valid character\n");
+				} else {
+					// calculate rpn
+						// display rpn
+					//CalcRPN(rpn,RPNStack);
+					//DisplayStack(RPNStack);
+					//printf("\n");
+					if(isdigit(rpn[0])){
+						//in = rpn;
+						//pInput= atof(in);
+						//pInput = New(double);
+						pInput = (double)GetBlock(16);
+						pInput = atof(rpn);
+						//Push(stack,(stackElementT)StringToReal(in)); works
+						//Push(stack,(stackElementT)atof(in)); does not work
+						//Push(RPNStack, (stackElementT)(int)pInput);
+						Push(RPNStack,(stackElementT)pInput);
+					}
+					if(isOperator(o)){
+							//rhs =(int)Pop(RPNStack);
+							rhs = Pop(RPNStack);
+							lhs = Pop(RPNStack);
+							//lhs = (int)Pop(RPNStack);
+							result = OperandCase(o,lhs,rhs);
+							printf("%d\n", (int)result);
+							Push(RPNStack,(stackElementT)(int)result);
+					}
+						}
+		}
+	}
+//free(in);
+//free(rpn);
+FreeStack(RPNStack);
+
+}

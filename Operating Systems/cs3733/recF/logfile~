@@ -1,0 +1,168 @@
+7.ant13:~/Documents/cs3733/recF> ./countertest 10 100
+incthread started: 100
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread started: 100
+incthread done
+incthread done
+incthread started: 100
+incthread done
+Count should be 1000
+Count is        1000
+
+ant13:~/Documents/cs3733/recF> ./countertest 10 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+incthread done
+Count should be 10000000
+Count is        10000000
+
+8.gave the same answer
+
+9. Well the thread count is the same but the counter is zero since I returned zero.
+
+10. it worked fine for 10 100, but when i tried 10 1000000 it gave me an incorrect
+count.
+
+13.
+ant13:~/Documents/cs3733/recF> ./countertest 10 100
+incthread started: 100
+incthread started: 100
+incthread done
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+Count should be 1000
+Count is        1000
+
+Time dif: 455ant13:~/Documents/cs3733/recF> ./countertest 10 1000000
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread done
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread done
+incthread done
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread done
+incthread done
+Count should be 10000000
+Count is        6145500
+
+Time dif: 76448ant13:~/Documents/cs3733/recF> 
+
+
+14.
+ant13:~/Documents/cs3733/recF> ./countertest 10 100
+incthread started: 100
+incthread started: 100
+incthread started: 100
+incthread done
+incthread done
+incthread started: 100
+incthread done
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread started: 100
+incthread started: 100
+incthread done
+incthread started: 100
+incthread done
+incthread done
+Count should be 1000
+Count is        1000
+
+Time dif: 461
+ant13:~/Documents/cs3733/recF> ./countertest 10 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread done
+incthread done
+incthread started: 1000000
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread done
+incthread done
+incthread done
+incthread started: 1000000
+incthread done
+incthread started: 1000000
+incthread done
+Count should be 10000000
+Count is        5637136
+
+Time dif: 81303
+ant13:~/Documents/cs3733/recF> 
+
+amount of microseconds:4855
+
+
+15. I learned that calling threads can give you different values than what is expected
+
+
+
+

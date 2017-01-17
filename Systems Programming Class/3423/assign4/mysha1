@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+if($#ARGV > 1){
+	print "Usage: mysha1 <rootfile> [sha1file]\n";
+	exit;
+}
+
+open(ROOT, "< $ARGV[0]") || die "Unable to open rootfile: $ARGV[0]\n";
+
+if (@ARGV == 2){
+	open(SHA1,"> $ARGV[1]");
+}
+
+while ($path = <ROOT>){
+	chop $path;
+	open(PATH, "/usr/bin/find $path -print |");
+	while ($file = <PATH>){
+		chop $file;
+		if (-f $file){
+				$regfile = $file;
+				$output = `sha1sum $regfile`;
+				@arrOut = split(/\s+/, $output);
+
+				if (@ARGV == 2){
+					print SHA1 "$arrOut[1]\t$arrOut[0]\n";
+				}
+				if (@ARGV == 1){
+					print "$arrOut[1]\t$arrOut[0]\n";
+				}
+		}
+	}
+}

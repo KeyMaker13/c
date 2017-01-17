@@ -1,0 +1,9 @@
+Income 5 10.01
+Income 5 20
+Income 5 70
+Interest 1 888 2.01
+Interest 3 888 4
+Interest 5 888 6
+999 999 9 Expense
+999 999 19.01 Expense
+999 999 29 Expense

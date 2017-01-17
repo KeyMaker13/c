@@ -1,0 +1,20 @@
+#!/usr/bin/perl -w
+
+$a = shift;
+$a = shift;
+$b = <>;
+print "\$b[2] = ", $b[2];#, "\n";
+print "\$b = ", $b;
+$c = shift @b;
+
+#print "\$b[0] = ", $b[0];#, "\n";
+#print "\@b = ", @b;
+print "\$c = ", $c;#, "\n";
+
+#print "\$a = ", $a, "\n";
+#print "\$b[2] = ", $b[2], "\n";
+print "\$ARGV = ", $ARGV, "\n";
+
+#print "\@ARGV = ", @ARGV, "\n";
+#print "\$ARGV[3] = ", $ARGV[3], "\n";
+#print "\$#ARGV = ", $#ARGV, "\n";

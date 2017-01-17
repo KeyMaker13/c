@@ -1,0 +1,13 @@
+apple
+stone
+vehicle
+operation
+shift
+nozzle
+brake
+exhaust
+running
+boxing
+computer
+software
+hardware

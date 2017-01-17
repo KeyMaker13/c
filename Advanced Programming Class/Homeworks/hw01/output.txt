@@ -1,0 +1,272 @@
+Hi I am the magic calendar maker
+I will give you two options
+Press 1 and you will enter a specific date in time and I will tell you on what day it lands
+Press 2 and you will enter a specific year and I will display that yearly calendar for you
+And your option is ?
+1
+You have chosen 1 
+Enter year 2006
+Enter Month 2
+Enter day 15
+The day is Wednesday
+
+If you want to exit press 0
+If you want to continue enter 1 any other number
+I will keep on asking because magic can last forever
+1
+Hi I am the magic calendar maker
+I will give you two options
+Press 1 and you will enter a specific date in time and I will tell you on what day it lands
+Press 2 and you will enter a specific year and I will display that yearly calendar for you
+And your option is ?
+2
+You have chosen 2 
+Enter a year: 2009
+                   2009
+
+January
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   31
+ 
+
+February
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 
+
+March
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 29   30   31   
+
+April
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                 1    2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   
+
+May
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                           1    2
+  3    4    5    6    7    8    9
+ 10   11   12   13   14   15   16
+ 17   18   19   20   21   22   23
+ 24   25   26   27   28   29   30
+ 31   
+
+June
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   29   30   
+
+July
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                 1    2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   31   
+
+August
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                                1
+  2    3    4    5    6    7    8
+  9   10   11   12   13   14   15
+ 16   17   18   19   20   21   22
+ 23   24   25   26   27   28   29
+ 30   31   
+
+September
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+            1    2    3    4    5
+  6    7    8    9   10   11   12
+ 13   14   15   16   17   18   19
+ 20   21   22   23   24   25   26
+ 27   28   29   30   
+
+October
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   31
+ 
+
+November
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 29   30   
+
+December
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+            1    2    3    4    5
+  6    7    8    9   10   11   12
+ 13   14   15   16   17   18   19
+ 20   21   22   23   24   25   26
+ 27   28   29   30   31   
+If you want to exit press 0
+If you want to continue enter 1 any other number
+I will keep on asking because magic can last forever
+Please enter an integer
+Retry: 1
+Hi I am the magic calendar maker
+I will give you two options
+Press 1 and you will enter a specific date in time and I will tell you on what day it lands
+Press 2 and you will enter a specific year and I will display that yearly calendar for you
+And your option is ?
+2
+You have chosen 2 
+Enter a year: 1400
+Year must be greater than 1751
+Enter a year: 1751
+                   1751
+
+January
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                           1    2
+  3    4    5    6    7    8    9
+ 10   11   12   13   14   15   16
+ 17   18   19   20   21   22   23
+ 24   25   26   27   28   29   30
+ 31   
+
+February
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   
+
+March
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   29   30   31   
+
+April
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   
+
+May
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                                1
+  2    3    4    5    6    7    8
+  9   10   11   12   13   14   15
+ 16   17   18   19   20   21   22
+ 23   24   25   26   27   28   29
+ 30   31   
+
+June
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+            1    2    3    4    5
+  6    7    8    9   10   11   12
+ 13   14   15   16   17   18   19
+ 20   21   22   23   24   25   26
+ 27   28   29   30   
+
+July
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   31
+ 
+
+August
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 29   30   31   
+
+September
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                 1    2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   
+
+October
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                           1    2
+  3    4    5    6    7    8    9
+ 10   11   12   13   14   15   16
+ 17   18   19   20   21   22   23
+ 24   25   26   27   28   29   30
+ 31   
+
+November
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   29   30   
+
+December
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                 1    2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   31   
+If you want to exit press 0
+If you want to continue enter 1 any other number
+I will keep on asking because magic can last forever
+Please enter an integer
+Retry: 0
+dog23:~/cs2213/hw01> 
+

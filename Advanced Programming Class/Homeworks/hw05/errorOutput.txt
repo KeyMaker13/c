@@ -1,0 +1,7 @@
+ make hangman
+cc     hangman.c   -o hangman
+/tmp/ccieVXbm.o: In function `Game':
+hangman.c:(.text+0x156): undefined reference to `InitDictionary'
+hangman.c:(.text+0x164): undefined reference to `ChooseRandomWord'
+collect2: ld returned 1 exit status
+make: *** [hangman] Error 1

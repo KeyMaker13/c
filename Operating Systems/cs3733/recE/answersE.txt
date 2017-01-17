@@ -1,0 +1,25 @@
+Ivan Capistran
+
+6 The sizes are not correct because the child
+will not return the total size and the child
+will not print total size
+
+7 
+the answer would be greater
+
+8
+the size is correct because it returns 
+the correct total
+
+9
+yes the total size is correct because
+they add up just fine
+
+10
+well the sizes add up but they are not the same as before
+
+11
+the sizes now seem to be normal
+
+12
+gave me an error on make

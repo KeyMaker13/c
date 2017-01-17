@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+
+$regexp = shift;
+
+foreach $dir (@ARGV){
+	@files = `/usr/bin/find $dir  -print`;
+}
+
+chop @files;
+@files = grep(-f && -T, @files);
+
+#while (files = <>){
+#	@files = grep($regexp, @files);
+	print join("\n",@files), "\n";
+#}

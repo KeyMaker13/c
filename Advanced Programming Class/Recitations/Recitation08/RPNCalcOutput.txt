@@ -1,0 +1,28 @@
+elk03:~/cs2213/Recitations/Recitation08> ./RPNCalc
+This is a RPN Calculator
+You will enter a Reverse Polish Notation equation like the example bellow
+50.0 (enter) 1.5 (x) 3.8 (enter) 2.0 (/) (+)
+If you enter incorrect values you can try again
+The only correct operators are + - / *
+I will calculate the equation you entered
+press q any time to quit
+Begin to enter your RPN equation: > 10
+> 5
+> -
+5
+> 5
+> +
+10
+> 2
+> /
+5
+> 3
+> *
+15
+> e
+This entry does not contain a valid character
+> 5
+> +
+20
+> q
+elk03:~/cs2213/Recitations/Recitation08> 

@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+$a = shift;
+$b = pop;
+$c = shift;
+$d = shift;
+$e = <>;
+
+print "\$b = ",$b;
+print "\n\$e = ", $e;
+print "\$ARGV = ", $ARGV, "\n";

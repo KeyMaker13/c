@@ -1,0 +1,26 @@
+#!/usr/bin/perl -w
+
+$n = 0;
+while ($files = <ARGV> ) {
+	
+	@line = split (/:/, $files);
+	$all[$n] ="$line[0]\t\t$line[4]";
+	$n++;
+}
+
+@all = sort (@all);
+
+$i = 0;
+while ($i<$n){
+	print "$all[$i]\n";
+	$i++;
+}
+
+#Maynard's Code
+
+#@pwlines = <>;
+#@pwlines = sort @pwlines;
+#foreach $line (@pwlines) {
+#  @field = split(/:/,$line);
+#  print "$field[0]\t\t$field[4]\n";
+#}

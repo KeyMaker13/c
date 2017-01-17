@@ -1,0 +1,177 @@
+This is the game of life
+Created in a 50 x 30 grid
+I will ask you to fill the grid with life
+
+You will enter i and j
+i for row, j for column
+A[i][j] is the position of where an organism will be filled
+instead of typing 0,0 for the top left of the array, you can type 1,1
+I subtracted 1 from your input so you can treat 1,1 as the start of the array
+enter -1, and -1 to stop
+if i or j are not with in range you will have to enter the values again
+Enter i : 1
+Enter j : 1
+Enter i : 1
+Enter j : 2
+Enter i : 2
+Enter j : 1
+Enter i : 2
+Enter j : 2
+Enter i : 1
+Enter j : 30
+Enter i : 1
+Enter j : 29
+Enter i : 2
+Enter j : 30
+Enter i : 7
+Enter j : 7
+Enter i : 12
+Enter j : 13
+Enter i : 13
+Enter j : 13
+Enter i : 11
+Enter j : 12
+Enter i : 10
+Enter j : 11
+Enter i : 11
+Enter j : 11
+Enter i : 19
+Enter j : 1
+Enter i : 50
+Enter j : 1
+Enter i : 50
+Enter j : 2
+Enter i : 50
+Enter j : 30
+Enter i : 50
+Enter j : 29
+Enter i : 49
+Enter j : 30
+Enter i : 34
+Enter j : 30
+Enter i : 33
+Enter j : 40
+j is not within range
+Enter i : 35
+Enter j : 34
+j is not within range
+Enter i : 3635
+Enter j : 36
+i is not within range
+j is not within range
+Enter i : 35
+Enter j : 36
+j is not within range
+Enter i : 35
+Enter j : 28
+Enter i : 33  
+Enter j : 27
+Enter i : -1
+Enter j : -1
+i is not within range
+j is not within range
+The life you have made in the grid
+xx                          xx
+xx                           x
+                              
+                              
+                              
+                              
+      x                       
+                              
+                              
+          x                   
+          xx                  
+            x                 
+            x                 
+                              
+                              
+                              
+                              
+                              
+x                             
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                          x   
+                             x
+                           x  
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                             x
+xx                          xx
+How many generations do you want to play?
+3
+After 3 generations this much life remaineds
+Steady state was reached
+xx                          xx
+xx                          xx
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+          xx                  
+          x x                 
+           x                  
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                            xx
+                            xx

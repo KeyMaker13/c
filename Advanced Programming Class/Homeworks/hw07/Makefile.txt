@@ -1,0 +1,15 @@
+# Makefile comments
+PROGRAMS = driver
+CC = gccx
+CFLAGS =
+all: $(PROGRAMS)
+tidy:
+	rm -f ,* .,* *~ core a.out *.o graphics.ps
+# C compilations
+driver.o: driver.c scanadt.h
+	$(CC) $(CFLAGS) -c driver.c
+scanadt.o: scanadt.c scanadt.h
+	$(CC) $(CFLAGS) -c scanadt.c
+# Executable programs
+driver: driver.o scanadt.o
+	$(CC) $(CFLAGS) -o driver driver.o scanadt.o

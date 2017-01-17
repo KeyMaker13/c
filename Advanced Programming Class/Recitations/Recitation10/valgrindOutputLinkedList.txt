@@ -1,0 +1,40 @@
+valgrind ./list-qtest
+==30872== Memcheck, a memory error detector.
+==30872== Copyright (C) 2002-2008, and GNU GPL'd, by Julian Seward et al.
+==30872== Using LibVEX rev 1884, a library for dynamic binary translation.
+==30872== Copyright (C) 2004-2008, and GNU GPL'd, by OpenWorks LLP.
+==30872== Using valgrind-3.4.1-Debian, a dynamic binary instrumentation framework.
+==30872== Copyright (C) 2000-2008, and GNU GPL'd, by Julian Seward et al.
+==30872== For more details, rerun with: -v
+==30872== 
+Enter commands in the following forms:
+  enqueue x   -- Enqueue the token x
+  dequeue     -- Dequeue the value at the head of the queue
+  display     -- Display the contents of the queue
+  reverse     -- Reverse the contents of the queue
+  quit        -- Exit from the program
+:enqueue x
+:enqueue y
+:enqueue z
+:enqueue a  
+:enqueue b
+:enqueue c
+:reverse
+:display
+Queue contains: c, b, a, z, y, x
+:quit
+==30872== 
+==30872== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 15 from 1)
+==30872== malloc/free: in use at exit: 219 bytes in 30 blocks.
+==30872== malloc/free: 59 allocs, 29 frees, 1,485 bytes allocated.
+==30872== For counts of detected errors, rerun with: -v
+==30872== searching for pointers to 30 not-freed blocks.
+==30872== checked 64,028 bytes.
+==30872== 
+==30872== LEAK SUMMARY:
+==30872==    definitely lost: 219 bytes in 30 blocks.
+==30872==      possibly lost: 0 bytes in 0 blocks.
+==30872==    still reachable: 0 bytes in 0 blocks.
+==30872==         suppressed: 0 bytes in 0 blocks.
+==30872== Rerun with --leak-check=full to see details of leaked memory.
+elk06:~/cs2213/Recitations/Recitation10> 

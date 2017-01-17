@@ -1,0 +1,26 @@
+Answer the following questions:
+
+   1. Describe in words what the shared buffer does. Indicate how you did the synchronization and the algorithm for adding to the buffer, e.g. what to do if you add to a full buffer.
+   2. Describe the conditions under which a thread will exit.
+   3. Can you tell how many cores the machine has from the results of your table? Explain.
+
+If you used a method other than the one described in the assignment, you need to describe in detail what you did including a discussion of the synchronization you used and how the threads terminated. 
+
+1. A shared buffer is a buffer that can be accessed by all the threads
+or processes. I used a semaphore by using a shared int called mutex and by
+calling the two functions wait() and signal(). I made sure that the buffer
+size would be the same as the number of primes to find so there would be no 
+need to work the algorithm around checking for a full buffer. When a number
+was found that was prime I called wait(mutex) then added to the buffer
+and incrimented the current index to the buffer. After that I called 
+signal(mutex) so the remaining threads could add to the buffer.
+
+2. A thread will exit when all the number of primes has been found.
+
+3. By looking at the tables and comparing it with part3. Using 1 thread 
+produces the same result as part3. Using 2 threads reduces it by almost half.
+Using 3 threads will reduce the time by 60 percent. When you use 4 - 8
+threads the time stays about the same and will increase a bit more. 
+The lowest value in the table is at the 4th thread. You can see that 
+adding more threads after 4 will slightly increase the time indicating that
+the CPU is more likely to have 4 cores.

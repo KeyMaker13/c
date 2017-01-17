@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <sys/time.h>
+#define MILLION 1000000L
+
+void function_to_time(void);
+
+
+/* 0 is false 1 is true  */
+
+int main (int argc, char *argv[]){
+
+   int lengthcheck;
+   int i = 0;
+
+   long timedif;
+   struct timeval tpend;
+   struct timeval tpstart;
+
+
+   if ( argc < 2  ){
+      fprintf(stderr, " Please enter 1 integer parameter\n");
+      exit(-1);
+   } else if ( argc > 2 ){
+      fprintf(stderr, " Please enter 1 integer parameter\n");
+      exit(-1);
+   }
+   
+   if ( strlen(argv[1]) > 25  ) {
+      fprintf(stderr, " Please do not try to buffer overflow\n");
+      exit(-1);
+   }   
+
+   lengthcheck = strlen(argv[1]);
+   
+   for ( i = 0; i < lengthcheck; i++){
+      if ( isalpha(argv[1][i]) ){
+         fprintf(stderr, " Please only enter digits \n");
+         exit(-1);         
+      } else if ( isdigit(argv[1][i])  ) {
+         
+         
+      } else {
+         fprintf(stderr," Please only enter digits \n");
+         exit(-1);
+      }         
+      
+   }   
+
+   fprintf(stderr, "This is part 2\n");
+   fprintf(stderr, "Ivan Capistran\n");	   
+   fprintf(stderr, "Parameter: %s\n" ,argv[1]);
+   long long primeparameter = atoll(argv[1]);	
+   /*
+   int prime = isPrimeLongLong(primeparameter);
+   if (prime){
+      printf("Is prime\n");
+      fprintf(stderr, "The answer is prime\n");
+   } else {
+      printf("Is not prime\n");
+      fprintf(stderr, "The answer is not prime\n");
+   }
+   */
+
+   int loop = 1;
+   int increase = 1;
+   long long primegreater;
+
+   if (gettimeofday(&tpstart, NULL)) {
+      fprintf(stderr, "Failed to get start time\n");
+      return 1;
+   }
+   while(loop){
+      
+      if ( isPrimeLongLong( primeparameter + increase )){
+         //function_to_time();    /* timed code goes here */
+         if (gettimeofday(&tpend, NULL)) {
+            fprintf(stderr, "Failed to get end time\n");
+            return 1;
+         }   
+         loop = 0;
+         primegreater = (primeparameter + increase);
+      }
+      increase++;
+   }
+
+   printf("%lld , %lld\n", primeparameter, primegreater);
+   timedif = MILLION*(tpend.tv_sec - tpstart.tv_sec) +
+                      tpend.tv_usec - tpstart.tv_usec;
+   printf("The function_to_time took %ld microseconds\n", timedif);
+
+   return 0;
+}

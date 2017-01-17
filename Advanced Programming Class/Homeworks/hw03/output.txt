@@ -1,0 +1,85 @@
+elk02:~/cs2213/Homeworks/hw03> ./hw03 bug hardware mouse cables input notebook chip keyboard ports compatible lan printer cpu laptop ram diskette load rom ethernet macintosh screenlock fax manuals slots floppydrive memory software font modem trackball games monitor upgrade harddrive motherboard test testing notinpuzzle asdf abcdefghij error notfound
+This is a word search program
+I will display a word search puzzle
+You will enter what words you want to find by entering them as command line arguments
+I will tell you at what grid coordinates they start so you can start to notice them
+For example the word Screen Lock starts at gamePuzzle[1][3] and runs horizontal
+I will also display all the exact words to search for to run the program again.
+
+  1 2 3 4 5 6 7 8 9 A B C D E F 
+1 e r s c r e e n l o c k h z e 
+2 p t o t r a c k b a l l k d s 
+3 i h t t k o o b e t o n a l e 
+4 h a y e i p r i n t e r a v m 
+5 c r r m k n t n o f g u i e o 
+6 e d t o o s o c g p n r n r e 
+7 l d e d m t i m u a d f p a r 
+8 b r n e r n h d m y m l u w a 
+9 i i r m a p m e p c x e t t w 
+A t v e l o o l p r y a a s f d 
+B a e h r u a o g u b r b f o r 
+C p l t s p l o a d h o o l s a 
+D m s e t f s t o l s r a m e h 
+E o w o k e y b o a r d a r e s 
+F c p u z h s o t n i c a m d m 
+
+These are the words to search for
+bug  hardware  mouse
+cables input notebook
+chip keyboard ports
+compatible lan printer
+cpu laptop ram
+diskette load rom
+ethernet macintosh screenlock
+fax manuals slots
+floppydrive memory software
+font modem trackball
+games monitor upgrade
+harddrive motherboard
+I attached a picture in the folder so you can see that I took this puzzle from the internet
+Not sure what website it was from
+
+These are the words you searched for
+bug is horizontal backward starting at gamePuzzle[B][A]
+hardware is backward verticly at gamePuzzle[D][F]
+mouse is found diagonal forward left at gamePuzzle[9][7]
+cables is found diagonal forward right at gamePuzzle[9][A]
+input is forward verticly at gamePuzzle[5][D]
+notebook is horizontal backward starting at gamePuzzle[3][C]
+chip is backward verticly at gamePuzzle[5][1]
+keyboard is horizontal forward starting at gamePuzzle[E][4]
+ports is found diagonal forward left at gamePuzzle[9][6]
+compatible is backward verticly at gamePuzzle[F][1]
+lan is horizontal backward starting at gamePuzzle[3][E]
+printer is horizontal forward starting at gamePuzzle[4][6]
+cpu is horizontal forward starting at gamePuzzle[F][1]
+laptop is found diagonal forward left at gamePuzzle[A][7]
+ram is horizontal forward starting at gamePuzzle[D][B]
+diskette is found diagonal backward left at gamePuzzle[8][8]
+load is horizontal forward starting at gamePuzzle[C][6]
+rom is found diagonal forward right at gamePuzzle[5][3]
+ethernet is backward verticly at gamePuzzle[D][3]
+macintosh is horizontal backward starting at gamePuzzle[F][D]
+screenlock is horizontal forward starting at gamePuzzle[1][3]
+fax is found diagonal backward left at gamePuzzle[B][D]
+manuals is found diagonal backward right at gamePuzzle[8][9]
+slots is horizontal backward starting at gamePuzzle[D][A]
+floppydrive is found diagonal backward right at gamePuzzle[D][5]
+memory is found diagonal backward left at gamePuzzle[F][F]
+software is backward verticly at gamePuzzle[C][E]
+font is horizontal backward starting at gamePuzzle[5][A]
+modem is forward verticly at gamePuzzle[5][4]
+trackball is horizontal forward starting at gamePuzzle[2][4]
+games is found diagonal forward right at gamePuzzle[6][9]
+monitor is found diagonal backward left at gamePuzzle[7][8]
+upgrade is found diagonal backward right at gamePuzzle[7][9]
+harddrive is forward verticly at gamePuzzle[3][2]
+motherboard is found diagonal forward right at gamePuzzle[5][4]
+test is not in the puzzle
+testing is not in the puzzle
+notinpuzzle is not in the puzzle
+asdf is not in the puzzle
+abcdefghij is not in the puzzle
+error is not in the puzzle
+notfound is not in the puzzle
+elk02:~/cs2213/Homeworks/hw03> 

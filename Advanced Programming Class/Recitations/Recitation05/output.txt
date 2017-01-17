@@ -1,0 +1,68 @@
+Enter two words
+I will count the letters for both
+I will reverse both of them
+I will compare both of them and display the number 0 if they are the same
+Display -1 if S1 comes before S2
+Display 1 if S1 comes after S2
+Enter your two Strings
+test
+testing
+The first string you entered is 4 characters long
+The second string you entered is 7 characters long
+Your first string in reverse is tset
+Your first string in reverse is gnitset
+Comparing in lexographic order
+S1 is before S2
+S1 is in S2
+
+Enter two words
+I will count the letters for both
+I will reverse both of them
+I will compare both of them and display the number 0 if they are the same
+Display -1 if S1 comes before S2
+Display 1 if S1 comes after S2
+Enter your two Strings
+tester
+test
+The first string you entered is 6 characters long
+The second string you entered is 4 characters long
+Your first string in reverse is retset
+Your first string in reverse is tset
+Comparing in lexographic order
+S1 is after S2
+S1 is not in S2
+
+Enter two words
+I will count the letters for both
+I will reverse both of them
+I will compare both of them and display the number 0 if they are the same
+Display -1 if S1 comes before S2
+Display 1 if S1 comes after S2
+Enter your two Strings
+test
+test
+The first string you entered is 4 characters long
+The second string you entered is 4 characters long
+Your first string in reverse is tset
+Your first string in reverse is tset
+Comparing in lexographic order
+Two words are the same
+S1 is in S2
+
+Enter two words
+I will count the letters for both
+I will reverse both of them
+I will compare both of them and display the number 0 if they are the same
+Display -1 if S1 comes before S2
+Display 1 if S1 comes after S2
+Enter your two Strings
+sauce
+apple
+The first string you entered is 5 characters long
+The second string you entered is 5 characters long
+Your first string in reverse is ecuas
+Your first string in reverse is elppa
+Comparing in lexographic order
+S1 is after S2
+S1 is not in S2
+

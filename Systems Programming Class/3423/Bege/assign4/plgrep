@@ -1,0 +1,95 @@
+#!/usr/bin/perl -w
+
+if($ARGV[0] ne "-l"){
+
+
+$key = shift(@ARGV);
+
+@ls=@ARGV;
+@files={};
+
+foreach $fi(@ls){
+open(FII,  "/usr/bin/find $fi  -print |") or die "dead";
+@tem=<FII>;
+push(@files,@tem);
+}
+
+
+
+chop @files;
+foreach $ll(@files){
+
+if(-f $ll && -T $ll)
+{
+  open (IN,"$ll")or die "dead";
+  @line =<IN>;
+  foreach $line(@line){
+    if($line =~/$key/){print "$ll:$line"};
+  }
+} 
+
+
+if(-f $ll && !-T $ll)
+{
+  open (IN1,"strings $ll|")or die "dead";
+  @line1 =<IN1>;
+foreach $line1(@line1){
+    if($line1 =~/$key/){print "$ll:$line1"};
+  }
+}
+
+ }
+
+
+
+}
+
+
+
+
+if($ARGV[0] eq "-l"){
+
+shift(@ARGV);
+$key = shift(@ARGV);
+
+@ls=@ARGV;
+@files={};
+
+foreach $fi(@ls){
+open(FII,  "/usr/bin/find $fi  -print |") or die "dead";
+@tem=<FII>;
+push(@files,@tem);
+}
+
+
+
+chop @files;
+foreach $ll(@files){
+
+if(-f $ll && -T $ll)
+{
+  open (IN,"$ll")or die "dead";
+  @line =<IN>;
+ 
+    @tt=grep(/$key/,@line);
+   if (@tt!=0)
+   {print "$ll\n"};
+ } 
+
+
+if(-f $ll && ! -T $ll)
+{
+  open (INN,"strings $ll|")or die "dead";
+  @line1 =<INN>;
+  
+    @tt1 = grep(/$key/,@line1);
+   if(@tt1!=0)
+   {print "$ll\n"};
+  
+}
+
+ }
+}
+
+
+

@@ -1,0 +1,25 @@
+#!/usr/bin/perl -w
+
+@all = `find @ARGV -print`;
+chop @all;
+
+@dir = grep (-d, @all);
+
+@dir = sort @dir;
+
+$i = 1;
+while ($i<=$#dir){
+	print join ("\n", $dir[$i]), "\n";
+	$i++;
+}
+
+#Maynard's Code
+#$dir = $ARGV[0];
+#open(DIR,"/bin/ls $dir |") || die "Unable to open directory $ARGV[0]: $!\n";
+#while ( <DIR> ) {
+#  chop;
+#  if ( -d "$dir/$_" ) {
+#    print "$dir/$_", "\n";
+#  }
+#}
+

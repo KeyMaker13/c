@@ -1,0 +1,15 @@
+I will ask you for the coefficients for two lines
+coefficients for these two equations
+A1x +B1y + C1 = 0 and A2x + B2y + C2 = 0
+I will compute the intersection point in the form of x0 and y0 values
+I will also determin the angle in terms of degrees
+Enter first equation
+A1 : -3
+B1 : 1
+C1 : 3
+
+Enter second equation
+A2 : -2.3
+B2 : 1
+C2 : -4
+x0 : 10.000000  y0 : 27.000000  angle : 44.635247

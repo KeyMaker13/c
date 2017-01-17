@@ -1,0 +1,50 @@
+elk04:~/cs2213/Homeworks/hw06> valgrind ./driver 723 41267 3a5b81
+==15443== Memcheck, a memory error detector.
+==15443== Copyright (C) 2002-2008, and GNU GPL'd, by Julian Seward et al.
+==15443== Using LibVEX rev 1884, a library for dynamic binary translation.
+==15443== Copyright (C) 2004-2008, and GNU GPL'd, by OpenWorks LLP.
+==15443== Using valgrind-3.4.1-Debian, a dynamic binary instrumentation framework.
+==15443== Copyright (C) 2000-2008, and GNU GPL'd, by Julian Seward et al.
+==15443== For more details, rerun with: -v
+==15443== 
+Mnemonics for 723 are:
+PAD
+PAE
+PAF
+PBD
+PBE
+PBF
+PCD
+PCE
+PCF
+RAD
+RAE
+RAF
+RBD
+RBE
+RBF
+RCD
+RCE
+RCF
+SAD
+SAE
+SAF
+SBD
+SBE
+SBF
+SCD
+SCE
+SCF
+Mnemonics for 41267 are:
+None, 41267 contains a 1 digit
+Mnemonics for 3a5b81 are:
+None, 3a5b81 contains a 1 digit
+Mnemonics for 3a5b81 are:
+None, 3a5b81 contains at least one alphabetic character
+==15443== 
+==15443== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 15 from 1)
+==15443== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==15443== malloc/free: 0 allocs, 0 frees, 0 bytes allocated.
+==15443== For counts of detected errors, rerun with: -v
+==15443== All heap blocks were freed -- no leaks are possible.
+elk04:~/cs2213/Homeworks/hw06> 

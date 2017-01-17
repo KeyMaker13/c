@@ -1,0 +1,9 @@
+name myexp
+comment This experiment contains 6 runs and tests context switch time.
+run myrun algorithm PSJF key "PSJF"
+run myrun algorithm SJF key "SJF"
+run myrun algorithm PSJF key "PSJF cstin .5" cstin .5
+run myrun algorithm SJF key "SJF cstin .5" cstin .5
+run myrun algorithm PSJF key "PSJF cstin 1.0" cstin 1.0
+run myrun algorithm SJF key "SJF cstin 1.0" cstin 1.0
+

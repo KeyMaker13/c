@@ -1,0 +1,37 @@
+elk03:~/cs2213/Recitations/Recitation08> valgrind ./RPNCalc
+==8764== Memcheck, a memory error detector.
+==8764== Copyright (C) 2002-2008, and GNU GPL'd, by Julian Seward et al.
+==8764== Using LibVEX rev 1884, a library for dynamic binary translation.
+==8764== Copyright (C) 2004-2008, and GNU GPL'd, by OpenWorks LLP.
+==8764== Using valgrind-3.4.1-Debian, a dynamic binary instrumentation framework.
+==8764== Copyright (C) 2000-2008, and GNU GPL'd, by Julian Seward et al.
+==8764== For more details, rerun with: -v
+==8764== 
+This is a RPN Calculator
+You will enter a Reverse Polish Notation equation like the example bellow
+50.0 (enter) 1.5 (x) 3.8 (enter) 2.0 (/) (+)
+If you enter incorrect values you can try again
+The only correct operators are + - / *
+I will calculate the equation you entered
+press q any time to quit
+Begin to enter your RPN equation: > 10
+> 5
+> -
+5
+> 7
+> 4
+> +
+11
+> *
+55
+> 5   
+> /
+11
+> q
+==8764== 
+==8764== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 15 from 1)
+==8764== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==8764== malloc/free: 22 allocs, 22 frees, 1,643 bytes allocated.
+==8764== For counts of detected errors, rerun with: -v
+==8764== All heap blocks were freed -- no leaks are possible.
+elk03:~/cs2213/Recitations/Recitation08> 

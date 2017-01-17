@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+foreach (@ARGV){
+	@files = `/usr/bin/find $_ -print`;
+}
+
+chop @files;
+@files = grep(-f && -T, @files);
+
+print join("\n", @files), "\n";

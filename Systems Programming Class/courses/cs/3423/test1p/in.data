@@ -1,0 +1,11 @@
+So this is just a simple test file
+to test if i can i can delete all blank lines in a file
+
+so above this text is a blank line
+       					      				    
+so above this text is a blank line that contains several spaces and several tabs also
+    	  	  	
+the one above here contains a few spaces a some lines
+
+so the file should all result in this entirely in a paragraph form
+

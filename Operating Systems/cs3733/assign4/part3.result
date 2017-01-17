@@ -1,0 +1,7 @@
+bat19:~/Documents/cs3733/assign4> ls -l part3.out
+-rw------- 1 ulv383 students 378 Apr 20 21:32 part3.out
+bat19:~/Documents/cs3733/assign4> wc part3.out
+ 21  21 378 part3.out
+bat19:~/Documents/cs3733/assign4> md5sum part3.out
+1e56b46488509ff16c19c0af6cc3c0f7  part3.out
+

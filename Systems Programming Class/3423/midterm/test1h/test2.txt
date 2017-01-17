@@ -1,0 +1,4 @@
+*XCOMM lkfgrlnfgdk X11R6 lnkldnkldnlkdnd X11R6 lkkldfnlsdn
+-XCOMM lkfgrlnfgdk X11R6 lnkldnkldnlkdnd X11R6 lkkldfnlsdn
+*XCOMM lkfgrlnfgdk X11R6 lnkldnkldnlkdnd X11R6 lkkldfnlsdn
+/XCOMM lkfgrlnfgdk X11R6 lnkldnkldnlkdnd X11R6 lkkldfnlsdn

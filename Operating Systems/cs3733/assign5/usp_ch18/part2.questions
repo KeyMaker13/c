@@ -1,0 +1,11 @@
+a) I would distribute the work among the host by having each host have
+4 connections. The client will create 4 threads for each host. Each thread
+will connect to the host and write to a common file descriptor.
+
+b) You would make an infinite for loop that makes a write then waits for a read.
+
+c) You would collect the results by calling a wait() and a signal() with a 
+shared semaphore. 
+
+d) I used 4 threads per host in the assigment. Each host has 4 connections
+and each connection sends a number to the host.

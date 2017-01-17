@@ -1,0 +1,15 @@
+# Makefile comments……
+PROGRAMS = hangman
+CC = gccx
+CFLAGS = 
+all: $(PROGRAMS)
+tidy:
+rm -f ,* .,* *~ core a.out *.o graphics.ps
+# C compilations
+hangman.o: hangman.c randword.h
+$(CC) $(CFLAGS) -c hangman.c
+randword.o: randword.c randword.h
+$(CC) $(CFLAGS) -c randword.c
+# Executable programs
+hangman: hangman.o randword.o
+$(CC) $(CFLAGS) -o hangman hangman.o randword.o

@@ -1,0 +1,31 @@
+#device		device		mount		FS	fsck	mount	mount
+#to mount	to fsck		point		type	pass	at boot	options
+#
+
+#/dev/dsk/c1d0s2 /dev/rdsk/c1d0s2 /usr		ufs-
+ 
+fd	-	/dev/fd	fd	-	no	-
+/proc	-	/proc	proc	-	no	-
+/dev/dsk/c0t0d0s1	-	-	swap-
+/dev/dsk/c0t0d0s0	/dev/rdsk/c0t0d0s0	/	ufs-
+/dev/dsk/c0t0d0s6	/dev/rdsk/c0t0d0s6	/usr	ufs-
+/dev/dsk/c0t0d0s4	/dev/rdsk/c0t0d0s4	/var	ufs-
+/dev/dsk/c0t0d0s5	/dev/rdsk/c0t0d0s5	/local	ufs-
+/dev/dsk/c0t0d0s3	/dev/rdsk/c0t0d0s3	/usr/openwin	ufs-
+     
+/dev/dsk/c1t0d0s0	/dev/rdsk/c1t0d0s0	/opt	ufs-
+/dev/dsk/c1t0d0s3	/dev/rdsk/c1t0d0s3	/export/user1	ufsnosuid
+/dev/dsk/c1t1d0s0	/dev/rdsk/c1t1d0s0	/usr/local	ufs-
+ 	
+/dev/dsk/c1t1d0s3	/dev/rdsk/c1t1d0s3	/export/user3	ufs	3
+/dev/dsk/c2t0d0s0	/dev/rdsk/c2t0d0s0	/export/home	ufs	4
+/dev/dsk/c2t0d0s3	/dev/rdsk/c2t0d0s3	/casa6	ufs-
+/dev/dsk/c2t3d0s0	/dev/rdsk/c2t3d0s0	/export/user2	ufs	5
+/dev/dsk/c2t3d0s3	/dev/rdsk/c2t3d0s3	/stage	ufs-
+	
+# ringer.cs.utsa.edu:/usr/local/news	-	/usr/local/news	nfs	-	yes	retry=10	
+ringer.cs.utsa.edu:/var/mail	-	/var/mail	nfs	-	yes	retry=10,actimeo=0	
+#ringer.cs.utsa.edu:/var/spool/news	-	/var/spool/news	nfs	-	yes	retry=10
+#ringer.cs.utsa.edu:/answerbook	-	/answerbook	nfs	-	yes	retry=10
+		
+swap	-	/tmp	tmpfs	-	yes	-

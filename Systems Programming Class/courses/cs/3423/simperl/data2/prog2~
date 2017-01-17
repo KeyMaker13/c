@@ -1,0 +1,20 @@
+#!/usr/bin/perl -w 
+
+$count = 1;
+
+if (@ARGV > 0){
+	foreach (@ARGV){	
+		#print `grep ".*" "$_" -in  | sed -e "s/:/ /g"`;
+		#print `sed -e "s/:/ /g" "$_"`;
+		open(INFILE,$_) or die;
+		foreach $line (<INFILE>) {
+		print $count," ",$line;		
+		$count++;
+		}
+	}
+}else {
+	while(<STDIN>){
+		chop($_);
+		print `grep ".*" "$_" -in | sed -e "s/:/ /g"`;
+	}
+}

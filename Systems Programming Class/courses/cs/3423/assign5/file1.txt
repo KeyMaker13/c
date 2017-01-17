@@ -1,0 +1,2 @@
+So this is file1.txt
+Just has simple text

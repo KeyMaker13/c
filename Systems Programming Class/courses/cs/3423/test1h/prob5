@@ -1,0 +1,23 @@
+#!/usr/bin/perl -w
+
+# this variable will grab the number of elements in the @ARGV
+$t = @ARGV;
+print $t,"\n";
+
+# this will test @ARGV which equals the number of elements it holds
+if ( @ARGV ) {
+print "yes\n";
+}
+
+$a = shift;
+$a = shift;
+#$b = <>;
+@b = <>;
+$c = shift @b;
+
+#print "a = ",$a,"\n";
+#print "b = ",@b,"\n";
+#print "\$ARGV = ",$ARGV,"\n";
+print "\$b[2] = ",$b[2],"\n";
+print "\@b = ",@b;
+print "\$c is ",$c,"\n";

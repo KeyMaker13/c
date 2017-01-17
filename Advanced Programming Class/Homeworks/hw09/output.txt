@@ -1,0 +1,137 @@
+elk03:~/cs2213/Homeworks/hw09> ./hw09
+>insert 13
+13 (0)
+>insert 7
+13 (-1)
+   L: 7 (0)
+>insert 9
+9 (0)
+   L: 7 (0)
+   R: 13 (0)
+>insert 15
+9 (+1)
+   L: 7 (0)
+   R: 13 (+1)
+      R: 15 (0)
+>11
+Unrecognized command: 11
+>insert 11
+9 (+1)
+   L: 7 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>insert 8
+9 (0)
+   L: 7 (+1)
+      R: 8 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>insert 3
+9 (0)
+   L: 7 (0)
+      L: 3 (0)
+      R: 8 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>insert 4
+9 (-1)
+   L: 7 (-1)
+      L: 3 (+1)
+         R: 4 (0)
+      R: 8 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>insert 1
+9 (-1)
+   L: 7 (-1)
+      L: 3 (0)
+         L: 1 (0)
+         R: 4 (0)
+      R: 8 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>insert 2
+9 (-1)
+   L: 3 (0)
+      L: 1 (+1)
+         R: 2 (0)
+      R: 7 (0)
+         L: 4 (0)
+         R: 8 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>delete 9
+8 (0)
+   L: 3 (0)
+      L: 1 (+1)
+         R: 2 (0)
+      R: 7 (0)
+         L: 4 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>delete 4
+8 (0)
+   L: 3 (0)
+      L: 1 (+1)
+         R: 2 (0)
+      R: 7 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>delete 2
+8 (0)
+   L: 3 (0)
+      L: 1 (+1)
+      R: 7 (0)
+   R: 13 (0)
+      L: 11 (0)
+      R: 15 (0)
+>find 8
+
+Searching for 8, did we find it? : 8
+>find 1
+
+Searching for 1, did we find it? : 1
+>find 20
+
+Searching for 20, did we find it? : 0
+>find 55
+
+Searching for 55, did we find it? : 0
+>find -1
+
+Searching for -, did we find it? : 0
+>find 15
+
+Searching for 15, did we find it? : 15
+>inorder
+ 1  3  7  8  11  13  15 
+>preorder
+ 8  3  1  7  13  11  15 
+>postorder
+ 1  7  3  11  15  13  8 
+>levelorder
+ 8  3  1  7  13  11  15 
+>max
+
+Max value is:
+Max is : 15 
+>min
+
+Min value is:
+Min is: 1 
+>height
+
+Height is: 3>count
+
+Count is: 7>sum
+
+Sum is: 58>quit
+elk03:~/cs2213/Homeworks/hw09> 

@@ -1,0 +1,13 @@
+<user name> <start time> <stop time> <bytes in> <bytes out>
+maynard 	1378 	     2463      12379894   34563
+icapistr 	1234 	     1234      12345512   56613
+ihomer          3213         1234      12351333   12313
+ljackson        1233	     3222      23111233   12223
+
+
+*storage* 	maynard 	2784643
+*storage* 	icapistr 	1233123
+*storage* 	ihomer 		1233312
+*storage* 	ljackson 	1233312
+
+
